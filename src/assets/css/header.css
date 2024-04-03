@@ -1,0 +1,31 @@
+nav{
+    background-color: white;
+}
+
+nav ul{
+    gap: 50px;
+}
+
+nav img{
+    width: 53px;
+    height: 50px;
+}
+
+nav .nav-menu{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+nav .offcanvas .offcanvas-header{
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav .offcanvas .offcanvas-header .nav-close{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+nav .offcanvas li{
+    height: 50px;
+}

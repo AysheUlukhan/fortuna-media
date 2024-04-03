@@ -1,0 +1,106 @@
+.about .about-page{
+    background-image: url('../images/about-page-img/about-hero.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about .about-page .about-hero-content h2{
+    font-size: 72px;
+     font-weight: 700;
+     line-height: 108px;
+     color: #ED7F1E;
+}
+
+.about .about-page .about-hero-content h3{
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 90px;
+    color: #FCFCFC;
+}
+
+.about .about-page .about-hero-content p{
+    font-weight: 400;
+    line-height: 24px;
+    color: #ACACAC;
+}
+
+.about .about-page a{
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    background-color: #ED7F1E;
+    color: white;
+}
+
+.about .about-content .main-title{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58.51px;
+    color: #444444;
+}
+
+.about .about-content .sub-title{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #979797;
+}
+
+.about .skills-part .card .card-content{
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    padding: 20px 8px;
+    border: 1px solid #EAEAEA;
+    width: 179px;
+    height: 122px;
+}
+
+.about .skills-part .card .card-content .card-text{
+    color: #F1994B;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 54px;
+}
+
+.about .skills-part .card .card-content .card-sub{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.about .short-about-services-part h6{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    color: #444444;
+}
+
+.about .about-team{
+
+}
+
+@media (max-width:480px) {
+    .about .about-page .about-hero-content h2{
+        font-size: 46px;
+        line-height: 50px;
+    }
+
+    .about .about-page .about-hero-content h3{
+        font-size: 45px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width:992px) {
+    .about .skills-part .card .card-content{
+        width: 100%;
+    }
+}

@@ -1,0 +1,29 @@
+
+
+.service-card .banner-card{
+    position: relative;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.service-card .banner-card .banner-text{
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+}
+
+.service-card .banner-card .banner-text h6{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    color: #FCFCFC;
+}
+
+.service-card .banner-card h6{
+    transition: .7s;
+}
+
+.service-card .banner-card:hover h6{
+    font-size: 38px;
+    transition: .5s;
+}
