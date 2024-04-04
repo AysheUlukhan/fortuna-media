@@ -128,6 +128,22 @@
     color: #979797;
 }
 
+.about .fm-project-contact h5{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58.51px;
+}
+
+.about .fm-project-contact .fm-contact-link{
+    border-radius: 4px;
+    padding: 12px 25px;
+    background-color: #ED7F1E;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #FDFDFD;
+}
+
 @media (max-width:480px) {
     .about .about-page .about-hero-content h2{
         font-size: 46px;

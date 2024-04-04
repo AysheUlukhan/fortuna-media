@@ -9,6 +9,7 @@ import team_4 from '../assets/images/about-page-img/team-4.png'
 import team_5 from '../assets/images/about-page-img/team-5.png'
 import team_6 from '../assets/images/about-page-img/team-6.png'
 import team_7 from '../assets/images/about-page-img/team-7.png'
+import project_contact from '../assets/images/about-page-img/project-contact.png'
 import PortfolioCard from '../components/PortfolioCard';
 
 const About = () => {
@@ -92,9 +93,8 @@ const About = () => {
         <HomeServicesCard />
       </section>
 
- <section className='about-team'>
-    
-        <div class="container py-5">
+      <section className='about-team mb-5'>
+        <div class="container ">
           <div class="d-flex flex-wrap gap-4 align-items-center g-5 py-5">
             <div class="col-lg-6 col-12 col-sm-12">
               <h5 class="main-title pb-4">FortunaMedia <br /> komandası:</h5>
@@ -172,8 +172,26 @@ const About = () => {
         </div>
       </section>
 
-      <section>
-          <PortfolioCard/>
+      <section className='mb-5'>
+        <PortfolioCard />
+      </section>
+
+      <section className='fm-project-contact'>
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div className='pt-5'>
+                    <h5 className='pb-5'>Layihən var?</h5>
+                    <a className='fm-contact-link' href="#">Müraciət et</a>
+                </div>
+              </div>
+              <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div>
+                  <img src={project_contact} alt="" class="d-block mx-lg-auto img-fluid"/>
+                </div>
+              </div>
+            </div>
+          </div>
       </section>
     </div>
   )

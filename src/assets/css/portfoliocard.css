@@ -1,25 +1,41 @@
-.about .fm-portfolio-card .card{
+.fm-portfolio-card .card{
     width: 240px;
     height: 280px;
     padding: 20px 25px;
 }
 
-.about .fm-portfolio-card .card h5{
+.fm-portfolio-card .card h5{
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
     color: #595959;
 }
 
+.fm-portfolio-link{
+    padding:10px 15px;
+    border-radius: 4px;
+    background-color: #F5F5F5;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #ACACAC;
+}
+
+.fm-portfolio-card .fm-portfolio-card-head h5{
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 600;
+}
+
 @media (max-width:528px) {
-    .about .fm-portfolio-card .card{
+    .fm-portfolio-card .card{
        width: 200px;
        padding: 10px;
     }
 }
 
 @media (max-width:448px) {
-    .about .fm-portfolio-card .card{
+    .fm-portfolio-card .card{
        width: 190px;
        height: 250px;
        padding: 10px;
@@ -27,7 +43,7 @@
 }
 
 @media (max-width:428px) {
-    .about .fm-portfolio-card .card{
+    .fm-portfolio-card .card{
        width: 180px;
        height: 250px;
        padding: 10px;
@@ -35,7 +51,7 @@
 }
 
 @media (max-width:408px) {
-    .about .fm-portfolio-card .card{
+    .fm-portfolio-card .card{
        width: 100%;
     }
 }
