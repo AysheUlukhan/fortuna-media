@@ -1,0 +1,62 @@
+.fm-service .fm-service-page {
+    background-image: url('../images/service-page-img/service-hero.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fm-service .fm-service-page .fm-service-hero-content h2{
+    font-size: 56px;
+    line-height: 72px;
+    font-weight: 700;
+    color: #FCFCFC;
+}
+
+.fm-service .fm-service-page .fm-service-hero-content p{
+    color: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #979797;
+}
+
+.fm-service .fm-service-page a{
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    background-color: #ED7F1E;
+    color: white;
+}
+
+.fm-service .fm-service-card h5{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58.51px;
+    color: #444444;
+}
+
+.fm-service .fm-service-card p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #979797;
+}
+
+.fm-service .fm-service-card a{
+    border-radius: 4px;
+    padding: 12px 35px;
+    background-color: #ED7F1E;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #FDFDFD;
+    text-align: center;
+}
+
+@media (max-width:992px) {
+    .fm-service .fm-service-card img{
+        width: 100%;
+    }
+}

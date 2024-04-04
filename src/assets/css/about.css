@@ -162,6 +162,13 @@
     }
 }
 
+@media (max-width:768px) {
+    .about .fm-project-contact .fm-project-contact-content{
+        text-align: center;
+        padding-bottom: 50px;
+    }
+}
+
 @media (max-width:528px) {
     .about .about-team .card{
        width: 200px;

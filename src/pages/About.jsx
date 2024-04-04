@@ -179,7 +179,7 @@ const About = () => {
       <section className='fm-project-contact'>
           <div className="container">
             <div className="row">
-              <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+              <div className="col-lg-6 col-md-6 col-sm-12 col-12 fm-project-contact-content">
                 <div className='pt-5'>
                     <h5 className='pb-5'>Layihən var?</h5>
                     <a className='fm-contact-link' href="#">Müraciət et</a>
