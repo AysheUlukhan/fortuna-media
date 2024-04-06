@@ -1,0 +1,117 @@
+.fm-services-detail .fm-service-detail-hero{
+    background-image: url('../images/service-page-img/service-detail-hero.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fm-services-detail .fm-service-detail-hero .fm-service-detail-nav{
+    color: #FCFCFC;
+}
+
+.fm-services-detail .fm-service-detail-hero .fm-service-detail-nav p{
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.fm-services-detail .fm-service-detail-hero .fm-service-detail-nav a{
+    color: #FCFCFC;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.fm-services-detail .fm-service-detail-hero .fm-service-detail-hero-content h2{
+    font-size: 56px;
+    line-height: 72px;
+    font-weight: 700;
+    color: #FCFCFC;
+}
+
+.fm-services-detail .fm-service-detail-hero .fm-service-detail-hero-content p{
+    color: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #979797;
+}
+
+.fm-services-detail .fm-service-detail-hero .fm-service-detail-contactlink{
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    background-color: #ED7F1E;
+    color: white;
+}
+
+.fm-services-detail .fm-service-detail-hero .fm-point{
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #FCFCFC;
+}
+
+.fm-services-detail .fm-service-detail-header h5{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58.51px;
+}
+
+.fm-services-detail .fm-service-detail-header p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #979797;
+}
+
+.fm-services-detail .fm-work-list .fm-work-list-hero h5{
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+}
+
+.fm-services-detail .fm-work-list .fm-work-list-item .list-group .point{
+    width: 6px;
+    height: 6px;
+    background-color: #979797;
+    border-radius: 50%;
+}
+
+.fm-services-detail .fm-work-list .fm-work-list-item .list-group li{
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #979797;
+}
+
+.fm-services-detail .fm-work-list .fm-work-list-item h6{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.fm-services-detail .fm-choice .fm-choice-head h5{
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.fm-services-detail .fm-choice .fm-choice-card p{
+    max-width: 80%;
+}
+
+@media (max-width:431px) {
+    .fm-services-detail .fm-service-detail-hero .fm-service-detail-hero-content h2{
+        font-size: 40px;
+    }
+}
+
+@media (max-width:540px) {
+    .fm-services-detail .fm-choice .fm-choice-card p{
+        max-width: 100%;
+    }
+}

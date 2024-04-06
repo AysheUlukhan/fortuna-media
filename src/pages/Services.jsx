@@ -23,80 +23,80 @@ const Services = () => {
       </section>
 
       <section className='fm-service-card'>
-        <div class="container px-4 py-5">
-          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-12 col-sm-12 col-lg-6 col-md-12">
-              <img src={service_card_1} class="d-block mx-lg-auto img-fluid w-100" alt="Bootstrap Themes" />
+        <div className="container px-4 py-5">
+          <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div className="col-12 col-sm-12 col-lg-6 col-md-12">
+              <img src={service_card_1} className="d-block mx-lg-auto img-fluid w-100" alt="Bootstrap Themes" />
             </div>
-            <div class="col-lg-6 col-12 col-sm-12 col-md-12">
+            <div className="col-lg-6 col-12 col-sm-12 col-md-12">
               <h5 className='pb-4'>Dizayn</h5>
               <p>Bizim dizayn prosesimiz, əməkdaşlıq və tökmə ilə köklənmişdir və biz sizin vizyonunuzu əhatə edərək və gücləndirərək təmin edirik. İlk konseptlərdən son təhvilatına qədər, vizual olaraq gözəl və funksional dizaynlara nail olmağa olan əməyimizlə sizi rəzdən çıxaran dizaynlara nail olmağa ümid edirik. İxtisasımız, inkişafımız və müştəri-mərkəzli yanaşmamız üçün FortunaMedia-nı seçin - birgə brendinizi yüksəldək!</p>
-              <div class="d-grid gap-2 justify-content-sm-center justify-content-lg-end">
+              <div className="d-grid gap-2 justify-content-sm-center justify-content-lg-end">
                 <a href='#'>Daha çox oxu</a>
               </div>
             </div>
           </div>
 
-          <div class="row  align-items-center g-5 py-5">
-            <div class="col-12 col-sm-12 col-lg-6 col-md-12">
-              <img src={service_card_2} class="d-block mx-lg-auto img-fluid w-100" alt="Bootstrap Themes" />
+          <div className="row  align-items-center g-5 py-5">
+            <div className="col-12 col-sm-12 col-lg-6 col-md-12">
+              <img src={service_card_2} className="d-block mx-lg-auto img-fluid w-100" alt="Bootstrap Themes" />
             </div>
-            <div class="col-lg-6 col-12 col-sm-12 col-md-12">
+            <div className="col-lg-6 col-12 col-sm-12 col-md-12">
               <h5 className='pb-4'>Brendinq</h5>
               <p>Bizim dizayn prosesimiz, əməkdaşlıq və tökmə ilə köklənmişdir və biz sizin vizyonunuzu əhatə edərək və gücləndirərək təmin edirik. İlk konseptlərdən son təhvilatına qədər, vizual olaraq gözəl və funksional dizaynlara nail olmağa olan əməyimizlə sizi rəzdən çıxaran dizaynlara nail olmağa ümid edirik. İxtisasımız, inkişafımız və müştəri-mərkəzli yanaşmamız üçün FortunaMedia-nı seçin - birgə brendinizi yüksəldək!</p>
-              <div class="d-grid gap-2 justify-content-sm-center justify-content-lg-end">
+              <div className="d-grid gap-2 justify-content-sm-center justify-content-lg-end">
                 <a href='#'>Daha çox oxu</a>
               </div>
             </div>
           </div>
 
-          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-12 col-sm-12 col-lg-6 col-md-12">
-              <img src={service_card_3} class="d-block mx-lg-auto img-fluid w-100" alt="Bootstrap Themes" />
+          <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div className="col-12 col-sm-12 col-lg-6 col-md-12">
+              <img src={service_card_3} className="d-block mx-lg-auto img-fluid w-100" alt="Bootstrap Themes" />
             </div>
-            <div class="col-lg-6 col-12 col-sm-12 col-md-12">
+            <div className="col-lg-6 col-12 col-sm-12 col-md-12">
               <h5 className='pb-4'>Marketinq</h5>
               <p>Bizim dizayn prosesimiz, əməkdaşlıq və tökmə ilə köklənmişdir və biz sizin vizyonunuzu əhatə edərək və gücləndirərək təmin edirik. İlk konseptlərdən son təhvilatına qədər, vizual olaraq gözəl və funksional dizaynlara nail olmağa olan əməyimizlə sizi rəzdən çıxaran dizaynlara nail olmağa ümid edirik. İxtisasımız, inkişafımız və müştəri-mərkəzli yanaşmamız üçün FortunaMedia-nı seçin - birgə brendinizi yüksəldək!</p>
-              <div class="d-grid gap-2 justify-content-sm-center justify-content-lg-end">
+              <div className="d-grid gap-2 justify-content-sm-center justify-content-lg-end">
                 <a href='#'>Daha çox oxu</a>
               </div>
             </div>
           </div>
 
-          <div class="row  align-items-center g-5 py-5">
-            <div class="col-12 col-sm-12 col-lg-6 col-md-12">
-              <img src={service_card_4} class="d-block mx-lg-auto img-fluid w-100" alt="Bootstrap Themes" />
+          <div className="row  align-items-center g-5 py-5">
+            <div className="col-12 col-sm-12 col-lg-6 col-md-12">
+              <img src={service_card_4} className="d-block mx-lg-auto img-fluid w-100" alt="Bootstrap Themes" />
             </div>
-            <div class="col-lg-6 col-12 col-sm-12 col-md-12">
+            <div className="col-lg-6 col-12 col-sm-12 col-md-12">
               <h5 className='pb-4'>PR&Media</h5>
               <p>Bizim dizayn prosesimiz, əməkdaşlıq və tökmə ilə köklənmişdir və biz sizin vizyonunuzu əhatə edərək və gücləndirərək təmin edirik. İlk konseptlərdən son təhvilatına qədər, vizual olaraq gözəl və funksional dizaynlara nail olmağa olan əməyimizlə sizi rəzdən çıxaran dizaynlara nail olmağa ümid edirik. İxtisasımız, inkişafımız və müştəri-mərkəzli yanaşmamız üçün FortunaMedia-nı seçin - birgə brendinizi yüksəldək!</p>
-              <div class="d-grid gap-2 justify-content-sm-center justify-content-lg-end">
+              <div className="d-grid gap-2 justify-content-sm-center justify-content-lg-end">
                 <a href='#'>Daha çox oxu</a>
               </div>
             </div>
           </div>
 
-          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-12 col-sm-12 col-lg-6 col-md-12">
-              <img src={service_card_5} class="d-block mx-lg-auto img-fluid w-100" alt="Bootstrap Themes" />
+          <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div className="col-12 col-sm-12 col-lg-6 col-md-12">
+              <img src={service_card_5} className="d-block mx-lg-auto img-fluid w-100" alt="Bootstrap Themes" />
             </div>
-            <div class="col-lg-6 col-12 col-sm-12 col-md-12">
+            <div className="col-lg-6 col-12 col-sm-12 col-md-12">
               <h5 className='pb-4'>Veb&Mobil Dizayn</h5>
               <p>Bizim dizayn prosesimiz, əməkdaşlıq və tökmə ilə köklənmişdir və biz sizin vizyonunuzu əhatə edərək və gücləndirərək təmin edirik. İlk konseptlərdən son təhvilatına qədər, vizual olaraq gözəl və funksional dizaynlara nail olmağa olan əməyimizlə sizi rəzdən çıxaran dizaynlara nail olmağa ümid edirik. İxtisasımız, inkişafımız və müştəri-mərkəzli yanaşmamız üçün FortunaMedia-nı seçin - birgə brendinizi yüksəldək!</p>
-              <div class="d-grid gap-2 justify-content-sm-center justify-content-lg-end">
+              <div className="d-grid gap-2 justify-content-sm-center justify-content-lg-end">
                 <a href='#'>Daha çox oxu</a>
               </div>
             </div>
           </div>
 
-          <div class="row  align-items-center g-5 py-5">
-            <div class="col-12 col-sm-12 col-lg-6 col-md-12">
-              <img src={service_card_6} class="d-block mx-lg-auto img-fluid w-100" alt="Bootstrap Themes" />
+          <div className="row  align-items-center g-5 py-5">
+            <div className="col-12 col-sm-12 col-lg-6 col-md-12">
+              <img src={service_card_6} className="d-block mx-lg-auto img-fluid w-100" alt="Bootstrap Themes" />
             </div>
-            <div class="col-lg-6 col-12 col-sm-12 col-md-12">
+            <div className="col-lg-6 col-12 col-sm-12 col-md-12">
               <h5 className='pb-4'>TV&Radio Layihələr</h5>
               <p>Bizim dizayn prosesimiz, əməkdaşlıq və tökmə ilə köklənmişdir və biz sizin vizyonunuzu əhatə edərək və gücləndirərək təmin edirik. İlk konseptlərdən son təhvilatına qədər, vizual olaraq gözəl və funksional dizaynlara nail olmağa olan əməyimizlə sizi rəzdən çıxaran dizaynlara nail olmağa ümid edirik. İxtisasımız, inkişafımız və müştəri-mərkəzli yanaşmamız üçün FortunaMedia-nı seçin - birgə brendinizi yüksəldək!</p>
-              <div class="d-grid gap-2 justify-content-sm-center justify-content-lg-end">
+              <div className="d-grid gap-2 justify-content-sm-center justify-content-lg-end">
                 <a href='#'>Daha çox oxu</a>
               </div>
             </div>

@@ -7,6 +7,7 @@ import Portfolio from "./pages/Portfolio"
 import Blog from "./pages/Blog"
 import Contact from "./pages/Contact"
 import Footer from "./layout/Footer"
+import ServicesDetail from "./pages/ServicesDetail"
 function App() {
 
   return (
@@ -14,11 +15,12 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Services" element={<Services />} />
-        <Route path="/Portfolio" element={<Portfolio />} />
-        <Route path="/Blog" element={<Blog />} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/servicesDetail" element={<ServicesDetail/>}/>
       </Routes>
       <Footer/>
     </>
