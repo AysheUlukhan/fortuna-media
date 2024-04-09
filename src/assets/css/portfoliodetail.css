@@ -1,0 +1,97 @@
+.fm-portfolio-detail .fm-detail-hero {
+    background-image: url('../images/portfolio-page-img/portfolio-detail-hero.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fm-portfolio-detail .fm-detail-hero .fm-hero-content h2 {
+    font-size: 56px;
+    line-height: 72px;
+    font-weight: 700;
+    color: #FCFCFC;
+}
+
+.fm-portfolio-detail .fm-detail-hero .fm-portfolio-detail-nav {
+    color: #FCFCFC;
+}
+
+.fm-portfolio-detail .fm-detail-hero .fm-portfolio-detail-nav p {
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.fm-portfolio-detail .fm-detail-hero .fm-portfolio-detail-nav a {
+    color: #FCFCFC;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.fm-portfolio-detail .fm-pd-category .fm-pd-category-head ul li {
+    border-radius: 4px;
+    padding: 0 10px;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #F5F5F5;
+    cursor: pointer;
+    transition: all .4s;
+    text-align: center;
+}
+
+.fm-portfolio-detail .fm-pd-category .fm-pd-category-head ul li:hover {
+    background-color: #2F2F2F;
+    color: white;
+}
+
+.fm-portfolio-detail .fm-pd-category .fm-pd-content img {
+    width: 630px;
+}
+
+.fm-portfolio-detail .fm-pd-content h5 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58.51px;
+    color: #444444;
+}
+
+.fm-portfolio-detail .fm-pd-content p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #979797;
+}
+
+/* .fm-portfolio-detail .fm-pd-category .fm-pd-slider img{
+    width: 300px;
+} */
+
+@media (max-width:992px) {
+    .fm-portfolio-detail .fm-pd-category .fm-pd-content img {
+        width: 100%;
+    }
+
+    .fm-portfolio-detail .fm-pd-category .fm-pd-slider img {
+        width: 100%;
+    }
+
+    .fm-portfolio-detail .fm-pd-category .fm-pd-content-left{
+        padding-top: 30px;
+    }
+}
+
+@media (min-width:1200px) {
+    .fm-portfolio-detail .fm-pd-category .fm-pd-slider img {
+        width: 300px;
+    }
+}
+
+@media (max-width:540px) {
+    .fm-portfolio-detail .fm-detail-hero .fm-hero-content h2 {
+        font-size: 39px;
+        line-height: 49px;
+    }
+}

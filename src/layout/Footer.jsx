@@ -6,7 +6,6 @@ import instagram from '../assets/images/icons/Instagram.png'
 import whatsapp from '../assets/images/icons/whatsapp.png'
 
 const Footer = () => {
-  let date = new Date();
   return (
     <footer className='mt-5 border-top'>
       <div className='container '>
@@ -22,7 +21,7 @@ const Footer = () => {
             </div>
           </div>
           <div className='d-flex justify-content-end'>
-            <p><span>Fortuna Media</span> © {date.getFullYear()}. All rights reserved.</p>
+            <p><span>Fortuna Media</span> © 2024. All rights reserved.</p>
           </div>
         </div>
 

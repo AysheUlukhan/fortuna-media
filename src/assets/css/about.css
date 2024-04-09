@@ -84,9 +84,8 @@
 }
 
 .about .about-team .card{
-    width: 240px;
-    height: 280px;
-    padding: 20px;
+    height: 300px;
+    padding: 20px 0;
 }
 
 .about .about-team .card h5{

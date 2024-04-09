@@ -29,7 +29,7 @@ const Header = () => {
                                 <NavLink to="/Blog" className='nav-link'>Bloq</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/" className='nav-link'>Fortuna TV</NavLink>
+                                <NavLink to="https://www.youtube.com/@FortunaMediaOfficial" className='nav-link' target='_blank'>Fortuna TV</NavLink>
                             </li>
                             <li>
                                 <NavLink to="/Contact" className='nav-link'>Əlaqə</NavLink>

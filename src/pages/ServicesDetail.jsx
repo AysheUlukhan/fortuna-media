@@ -14,7 +14,7 @@ const ServicesDetail = () => {
                         <LuChevronLeft /> <a href="/services">Xidmətlərimiz</a> <div className='fm-point'></div> <p className='mb-0'>PR&Media</p>
                     </div>
                     <div className='fm-service-detail-hero-content col-lg-6'>
-                        <h2>Xidmətlərimiz</h2>
+                        <h2>PR&Media</h2>
                         <p>Biz işinizin tələblərinə cavab vermək üçün dizayn və brendinq həlləri ilə başlayaraq təsirli rəqəmsal marketinq, PR&media, TV&Radio xidmətləri təklif edən dinamik  bir şirkətik.</p>
                     </div>
                     <div className='text-center'>

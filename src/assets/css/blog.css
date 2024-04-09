@@ -1,0 +1,26 @@
+.fm-blog .fm-hero{
+    background-image: url('../images/blog-page-img/blog-hero.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fm-blog .fm-hero .fm-hero-content h2{
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 48px;
+    color: #ED7F1E;
+}
+
+.fm-blog .fm-hero .fm-hero-content p{
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 48px;
+    color: #F5F5F5;
+}
+
+.fm-blog .fm-blog-card .fm-blog-card-head{
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
+}
