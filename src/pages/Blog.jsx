@@ -23,35 +23,35 @@ const Blog = () => {
           <div className='fm-blog-card-head'>
             <h5>Bloqlar:</h5>
           </div>
-          
-          <div className="row row-gap-5">
-            <div className="col-lg-4 col-md-4 col-sm-6 col-12">
+
+          <div className="row g-5 pt-4">
+            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
               <div>
-                <img src={card_one} alt="" />
+                <img src={card_one} alt="" className="d-block mx-lg-auto img-fluid w-100"/>
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
               <div>
-                <img src={card_two} alt="" />
+                <img src={card_two} alt="" className="d-block mx-lg-auto img-fluid w-100"/>
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
               <div>
-                <img src={card_three} alt="" />
+                <img src={card_three} alt="" className="d-block mx-lg-auto img-fluid w-100"/>
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
               <div>
-                <img src={card_four} alt="" />
+                <img src={card_four} alt="" className="d-block mx-lg-auto img-fluid w-100"/>
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
               <div>
-                <img src={card_five} alt="" />
+                <img src={card_five} alt="" className="d-block mx-lg-auto img-fluid w-100"/>
               </div>
             </div>
 
