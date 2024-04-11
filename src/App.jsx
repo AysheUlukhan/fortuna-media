@@ -9,6 +9,7 @@ import Contact from "./pages/Contact"
 import Footer from "./layout/Footer"
 import ServicesDetail from "./pages/ServicesDetail"
 import PortfolioDetail from "./pages/PortfolioDetail"
+import BlogDetail from "./pages/BlogDetail"
 function App() {
 
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blogDetail" element={<BlogDetail/>}/>
         <Route path="/contact" element={<Contact />} />
         <Route path="/servicesDetail" element={<ServicesDetail/>}/>
         <Route path="/portfolioDetail" element={<PortfolioDetail/>}/>
