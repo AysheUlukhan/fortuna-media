@@ -1,26 +1,78 @@
-.fm-blog .fm-hero{
+.fm-blog .fm-hero {
     background-image: url('../images/blog-page-img/blog-hero.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.fm-blog .fm-hero .fm-hero-content h2{
+.fm-blog .fm-hero .fm-hero-content h2 {
     font-size: 56px;
     font-weight: 700;
     line-height: 48px;
     color: #ED7F1E;
 }
 
-.fm-blog .fm-hero .fm-hero-content p{
+.fm-blog .fm-hero .fm-hero-content p {
     font-weight: 400;
     font-size: 25px;
     line-height: 48px;
     color: #F5F5F5;
 }
 
-.fm-blog .fm-blog-card .fm-blog-card-head h5{
+.fm-blog .fm-blog-card .fm-blog-card-head h5 {
     font-size: 24px;
     line-height: 36px;
     font-weight: 500;
 }
+
+.fm-blog .blog-search input {
+    outline: none;
+    border: 1px solid #979797;
+    border-radius: 4px;
+}
+
+.fm-blog .fm-blog-card .card {
+    position: relative;
+    overflow: hidden;
+    border: none;
+}
+
+
+
+.fm-blog .fm-blog-card .card .text {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: .5s;
+    pointer-events: none;
+    width: 100%;
+}
+
+.fm-blog .fm-blog-card .card:hover .text {
+    bottom: -5px;
+}
+
+.fm-blog .fm-blog-card .card .text h5 {
+    color: white;
+    font-size: 24px;
+}
+
+@media (max-width:820px) {
+    .fm-blog .blog-search input {
+        width:45% !important;
+    }
+}
+
+@media (max-width:540px) {
+    .fm-blog .blog-search input{
+        width: 100% !important;
+    }
+
+    .fm-blog .fm-hero .fm-hero-content h2{
+        font-size: 40px;
+    }
+}
+

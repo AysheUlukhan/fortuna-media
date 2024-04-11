@@ -23,39 +23,70 @@ const Blog = () => {
           <div className='fm-blog-card-head'>
             <h5>Bloqlar:</h5>
           </div>
+          <div className='d-flex justify-content-end py-4 blog-search'>
+            <input placeholder='Axtar' className='w-25 p-3' />
+          </div>
 
-          <div className="row g-5 pt-4">
-            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-              <div>
-                <img src={card_one} alt="" className="d-block mx-lg-auto img-fluid w-100"/>
+          <div className="row row-gap-4 pt-4">
+            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 ">
+              <div className='card'>
+                <img src={card_one} alt="" className="d-block mx-lg-auto img-fluid w-100" />
+                <div className='text'>
+                  <h5>Designing for Apple Vision Pro: Lessons Learned from Puzzling Places</h5>
+                </div>
               </div>
             </div>
 
             <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-              <div>
-                <img src={card_two} alt="" className="d-block mx-lg-auto img-fluid w-100"/>
+              <div className="card">
+
+                <img src={card_two} alt="" className="d-block mx-lg-auto img-fluid w-100" />
+                <div className='text'>
+                  <h5>Ayıq sürücü xidməti</h5>
+                </div>
               </div>
             </div>
 
             <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-              <div>
-                <img src={card_three} alt="" className="d-block mx-lg-auto img-fluid w-100"/>
+              <div className="card">
+                <img src={card_three} alt="" className="d-block mx-lg-auto img-fluid w-100" />
+                <div className='text'>
+                  <h5>Designing for Apple Vision Pro: Lessons Learned from Puzzling Places</h5>
+                </div>
               </div>
             </div>
 
             <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-              <div>
-                <img src={card_four} alt="" className="d-block mx-lg-auto img-fluid w-100"/>
+              <div className="card">
+                <img src={card_four} alt="" className="d-block mx-lg-auto img-fluid w-100" />
+                <div className='text'>
+                  <h5>Designing for Apple Vision Pro: Lessons Learned from Puzzling Places</h5>
+                </div>
               </div>
             </div>
 
             <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-              <div>
-                <img src={card_five} alt="" className="d-block mx-lg-auto img-fluid w-100"/>
+              <div className="card">
+                <img src={card_five} alt="" className="d-block mx-lg-auto img-fluid w-100" />
+                <div className='text'>
+                  <h5>Designing for Apple Vision Pro: Lessons Learned from Puzzling Places</h5>
+                </div>
               </div>
             </div>
 
           </div>
+
+
+
+          {/* <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+            <div class="card">
+              <img src={card_one} alt="" className="d-block mx-lg-auto img-fluid w-100" />
+              <div class="text">
+                <h5>Designing for Apple Vision Pro: Lessons Learned from Puzzling Places</h5>
+              </div>
+            </div>
+          </div> */}
+
         </div>
       </section>
     </div>
