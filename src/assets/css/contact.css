@@ -3,11 +3,22 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    height: 480px;
 }
+
+
 
 .fm-contact .fm-content-info {
     background-color: #2E2E2E80;
+    border-radius: 4px;
+    border: 1px solid #444444;
+    width: 220px;
+    height: 108px;
+    color: #ACACAC;
+    
 }
+
+
 
 .fm-contact .fm-contact-btn {
     border-radius: 4px;

@@ -2,25 +2,36 @@ import React from 'react';
 import '../assets/css/contact.css';
 import location from '../assets/images/contact-page-img/location_..png';
 import contact_hero from '../assets/images/contact-page-img/contact-content.png';
-
+// import image1 from '../assets/images/home-page-img/home-service-1.png'
+// import image2 from '../assets/images/home-page-img/home-service-2.png'
+// import image3 from '../assets/images/home-page-img/home-service-3.png'
 const Contact = () => {
   return (
     <div className='fm-contact'>
-      <section className='fm-contact-hero mb-5 py-5'>
-        <div className='container py-5'>
-          <div className='row g-5'>
-            <div className='fm-content-info text-center col-lg-4'>
-              <img src={location} alt="" />
-              <p>Bakı,Azərbaycan <br /> Səbail ray.,ISR Plaza</p>
+      <section className='fm-contact-hero w-100 mb-5 py-5 position-relative'>
+        <div className='container py-5 position-absolute bottom-0 '>
+          <div className='d-flex justify-content-center flex-wrap gap-5 '>
+            <div className='text-center '>
+              <div className='fm-content-info py-2'>
+                <img className='pb-2' src={location} alt="" />
+                <p>Bakı,Azərbaycan <br /> Səbail ray.,ISR Plaza</p>
+              </div>
+
             </div>
-            <div className='fm-content-info text-center col-lg-4'>
-              <img src={location} alt="" />
-              <p className='mb-0'>+994 51 123 45 56</p>
-              <p className='mb-0'>+994 51 123 45 78</p>
+            <div className=' text-center'>
+              <div className='fm-content-info py-2'>
+                <img src={location} alt="" className='pb-2' />
+                <p className='mb-0'>+994 51 123 45 56</p>
+                <p className='mb-0'>+994 51 123 45 78</p>
+              </div>
+
             </div>
-            <div className='fm-content-info text-center col-lg-4'>
-              <img src={location} alt="" />
-              <p>office@fortunamedia.az</p>
+            <div className=' text-center'>
+              <div className='fm-content-info py-2'>
+                <img className='pb-2' src={location} alt="" />
+                <p>office@fortunamedia.az</p>
+              </div>
+
             </div>
           </div>
         </div>
