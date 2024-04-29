@@ -37,6 +37,11 @@
     border: none;
 }
 
+.fm-blog .fm-blog-card .card img{
+    width: 415;
+    height: 376px;
+}
+
 
 
 .fm-blog .fm-blog-card .card .text {
@@ -90,6 +95,12 @@
     font-size: 20px;
     border-radius: 8px;
 }
+
+.fm-blog .arrow-item.disabled {
+    pointer-events: none; /* Linklərin klikini deaktiv edir */
+    opacity: 0.5; /* Linkin dərinliyini azaldır */
+    cursor: not-allowed; /* İşarəçinin görünüşünü dəyişdirir */
+  }
 
 @media (max-width:820px) {
     .fm-blog .blog-search input {

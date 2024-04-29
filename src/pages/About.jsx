@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../assets/css/about.css'
 import komanda_image from '../assets/images/about-page-img/komanda-pic.png'
 import HomeServicesCard from '../components/HomeServicesCard';
@@ -6,8 +6,10 @@ import HomeServicesCard from '../components/HomeServicesCard';
 import project_contact from '../assets/images/about-page-img/project-contact.png'
 import PortfolioCard from '../components/PortfolioCard';
 import TeamCard from '../components/TeamCard';
+import { ApiContext } from '../context/ApiContext';
 
 const About = () => {
+  const { statistic } = useContext(ApiContext);
   return (
     <div className='about'>
       <section className='about-page mb-5'>
@@ -24,16 +26,16 @@ const About = () => {
       </section>
 
       <section className='about-content mb-5'>
-        <div class="container py-5">
-          <div class="row align-items-center row-gap-4 py-5">
-            <div class="col-lg-6 col-12 col-sm-12">
-              <h5 class="main-title pb-4">Fortuna Media</h5>
-              <p class="sub-title">Biz işinizin tələblərinə cavab vermək üçün dizayn və brendinq həlləri ilə başlayaraq təsirli rəqəmsal marketinq, PR&media, TV&Radio xidmətləri təklif edən dinamik  bir şirkətik.</p>
-              <p class="sub-title">Biz işimizdə peşəkarlığı, səmimi əzmləri və işə məsuliyyət hissini nümayiş etdirən şəxsləri seçdik və Azərbaycanın gələcəyində adını duyuracaq bir komanda ilə xidmət verməyə başladıq.</p>
-              <p class="sub-title">Biz başladıqda, hər bir qrupun inkişafı üçün əsas prinsip kimi müştəri razıqəliyini seçdik. Bu istiqamətdə addım atmağımız, yalnız bir təminat deyil, hər bir təşəbbüsümüzdə əla nəticələr əldə etməyə sürükləyən bir güc kimi təsir etməkdədir.</p>
+        <div className="container py-5">
+          <div className="row align-items-center row-gap-4 py-5">
+            <div className="col-lg-6 col-12 col-sm-12">
+              <h5 className="main-title pb-4">Fortuna Media</h5>
+              <p className="sub-title">Biz işinizin tələblərinə cavab vermək üçün dizayn və brendinq həlləri ilə başlayaraq təsirli rəqəmsal marketinq, PR&media, TV&Radio xidmətləri təklif edən dinamik  bir şirkətik.</p>
+              <p className="sub-title">Biz işimizdə peşəkarlığı, səmimi əzmləri və işə məsuliyyət hissini nümayiş etdirən şəxsləri seçdik və Azərbaycanın gələcəyində adını duyuracaq bir komanda ilə xidmət verməyə className.</p>
+              <p className="sub-title">Biz başladıqda, hər bir qrupun inkişafı üçün əsas prinsip kimi müştəri razıqəliyini seçdik. Bu istiqamətdə addım atmağımız, yalnız bir təminat deyil, hər bir təşəbbüsümüzdə əla nəticələr əldə etməyə sürükləyən bir güc kimi təsir etməkdədir.</p>
             </div>
-            <div class="col-12 col-sm-12 col-lg-6">
-              <img src={komanda_image} class="d-block mx-lg-auto img-fluid" alt="komanda images" loading="lazy" />
+            <div className="col-12 col-sm-12 col-lg-6">
+              <img src={komanda_image} className="d-block mx-lg-auto img-fluid" alt="komanda images" loading="lazy" />
             </div>
           </div>
         </div>
@@ -42,41 +44,19 @@ const About = () => {
       <section className='skills-part mb-5'>
         <div className='container'>
           <div className='row mx-auto row-gap-4'>
-            <div className='col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6'>
-              <div className='card border-0'>
-                <div className='card-content'>
-                  <h5 className='card-text'>340+</h5>
-                  <p className='card-sub'>Layihə</p>
-                </div>
-              </div>
-            </div>
 
-            <div className='col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6'>
-              <div className='card border-0'>
-                <div className='card-content'>
-                  <h5 className='card-text'>30+</h5>
-                  <p className='card-sub'>işçi qüvvəsi</p>
+            {
+              statistic.map((item) => (
+                <div className='col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6'>
+                  <div className='card border-0'>
+                    <div className='card-content'>
+                      <h5 className='card-text'>{item.key}</h5>
+                      <p className='card-sub'>{item.value}</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div className='col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6'>
-              <div className='card border-0'>
-                <div className='card-content'>
-                  <h5 className='card-text'>7+</h5>
-                  <p className='card-sub'>il təcrübə</p>
-                </div>
-              </div>
-            </div>
-
-            <div className='col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6'>
-              <div className='card border-0'>
-                <div className='card-content'>
-                  <h5 className='card-text'>300+</h5>
-                  <p className='card-sub'>məmnun müştəri</p>
-                </div>
-              </div>
-            </div>
+              ))
+            }
           </div>
         </div>
       </section>
@@ -89,7 +69,7 @@ const About = () => {
       </section>
 
       <section className='about-team mb-5'>
-        <TeamCard/>
+        <TeamCard />
       </section>
 
       <section className='mb-5'>
@@ -97,21 +77,21 @@ const About = () => {
       </section>
 
       <section className='fm-project-contact'>
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-6 col-md-6 col-sm-12 col-12 fm-project-contact-content">
-                <div className='pt-5'>
-                    <h5 className='pb-5'>Layihən var?</h5>
-                    <a className='fm-contact-link' href="#">Müraciət et</a>
-                </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12 fm-project-contact-content">
+              <div className='pt-5'>
+                <h5 className='pb-5'>Layihən var?</h5>
+                <a className='fm-contact-link' href="#">Müraciət et</a>
               </div>
-              <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-                <div>
-                  <img src={project_contact} alt="" class="d-block mx-lg-auto img-fluid"/>
-                </div>
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+              <div>
+                <img src={project_contact} alt="" className="d-block mx-lg-auto img-fluid" />
               </div>
             </div>
           </div>
+        </div>
       </section>
     </div>
   )

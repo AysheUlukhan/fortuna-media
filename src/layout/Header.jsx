@@ -8,9 +8,9 @@ import { IoMenu } from "react-icons/io5";
 
 const Header = () => {
     return (
-        <nav className='sticky-top py-2'>
-            <div className='container '>
-                <div className='d-flex justify-content-between align-items-center'>
+        <nav className='sticky-top'>
+            <div className='container pt-1'>
+                <div className='d-flex justify-content-center justify-content-between align-items-center'>
                     <div>
                         <NavLink to='/'><img src={logo} className='img-fluid' alt="logo" /></NavLink>
                     </div>

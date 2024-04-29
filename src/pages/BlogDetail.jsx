@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { LuChevronLeft } from "react-icons/lu";
 import '../assets/css/blogdetail.css';
-import card_one from '../assets/images/blog-page-img/blog-card-one.png';
-import card_two from '../assets/images/blog-page-img/blog-card-2.png';
-import { NavLink } from 'react-router-dom';
+// import card_one from '../assets/images/blog-page-img/blog-card-one.png';
+// import card_two from '../assets/images/blog-page-img/blog-card-2.png';
+import { NavLink, useParams } from 'react-router-dom';
+import { ApiContext } from '../context/ApiContext';
 const BlogDetail = () => {
+    const {blog} = useContext(ApiContext);
+    const { id } = useParams();
+    console.log(id);
+    console.log(blog);
+    const blogDetails = blog.find(p=>p.id === id)
+
     return (
         <div className='fm-blog-detail'>
             <section className='fm-bd-hero mb-5 py-5'>
@@ -23,15 +30,14 @@ const BlogDetail = () => {
                     <div className="row g-lg-5 py-5">
                         <div className="col-lg-7 col-xl-7 col-sm-12 col-12">
                             <article className="fm-blog-post">
-                                <img src={card_one} className="w-100 d-block mx-lg-auto img-fluid dblog-img" alt="" />
+                                <img src={blogDetails?.image} className="w-100 d-block mx-lg-auto img-fluid dblog-img" alt="" />
                                 <div className="py-3">
-                                    {/* <h1>{userData.blog_category?.blog_category.title}</h1> */}
                                     <span></span> | <span></span>
-                                    <h2 className="pt-4">Designing for Apple Vision Pro:</h2>
+                                    <h2 className="pt-4">{blogDetails?.title}</h2>
                                 </div>
                             </article>
                         </div>
-                        <div className='col-lg-4 col-xl-4 col-sm-12 col-12 left-related-posts'>
+                        {/* <div className='col-lg-4 col-xl-4 col-sm-12 col-12 left-related-posts'>
                             <div>
                                 <div className="related-posts pb-3">
                                     <h4>Əlaqədar Yazılar</h4>
@@ -45,7 +51,6 @@ const BlogDetail = () => {
                                             <div className="col-lg-10">
                                                 <small className="text-body-secondary">
                                                     <span>djcsd</span> | 894
-                                                    {/* <span>{item.blog_category_title}</span> */}
                                                 </small>
                                                 <h6 className="mb-0">Ayıq sürücü xidməti</h6>
                                             </div>
@@ -54,7 +59,7 @@ const BlogDetail = () => {
                                     </NavLink>
                                 </ul>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>

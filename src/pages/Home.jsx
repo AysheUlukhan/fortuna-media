@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../assets/css/home.css'
 import HomeServicesCard from '../components/HomeServicesCard'
+import { ApiContext } from '../context/ApiContext'
 
 const Home = () => {
-
+  const { whyus } = useContext(ApiContext);
 
   return (
     <div className='home'>
@@ -42,40 +43,23 @@ const Home = () => {
             <h5>Niyə biz?</h5>
           </div>
           <div className="row pt-4 row-gap-4">
-            <div className='col-lg-3 col-xl-3 col-md-6 col-sm-6 col-12'>
-              <div className='cards'>
-                <h6 className='card-header'>İnnovativ Həllər:</h6>
-                <p className='card-text'>Yaratıcılıq və innovasiyada uğur qazanaraq, brendinizin böyük massada fərqlənəcək unikal və çoxsadə təkliflər təmin edirik.</p>
-              </div>
-            </div>
 
-            <div className='col-lg-3 col-xl-3 col-md-6 col-sm-6 col-12'>
-              <div className='cards'>
-                <h6 className='card-header'>Müştəri-yönümlülük: </h6>
-                <p className='card-text'>Sizin uğurunuz bizim üçün prioritetdir. Biz, biznesinizi, başa düşmək üçün vaxt ayırır, xidmətlərimizi və strategiyalarımızı uyğun şəkildə təklif edirik.</p>
-              </div>
-            </div>
-
-            <div className='col-lg-3 col-xl-3 col-md-6 col-sm-6 col-12'>
-              <div className='cards'>
-                <h6 className='card-header'>Ekspert Komanda: </h6>
-                <p className='card-text'>YBizim komandamız ekspertlərdən ibarətdir, hər biri öz sahələrinə əməkdaşlıq edən bacarıqlı  mütəxəssislərdir. </p>
-              </div>
-            </div>
-
-            <div className='col-lg-3 col-xl-3 col-md-6 col-sm-6 col-12'>
-              <div className='cards'>
-                <h6 className='card-header'>Açıq Kommunikasiya: </h6>
-                <p className='card-text'>Açıq və şəffaf kommunikasiya, müştəri əlaqələrimizin əsasını təşkil edir. Hər addımda sizi xəbərdar etmək, aydınlıq və etibar təmin etmək üçün əlimizdən gələni edirik.</p>
-              </div>
-            </div>
-
+            {
+              whyus.map((item) => (
+                <div className='col-lg-3 col-xl-3 col-md-6 col-sm-6 col-12' key={item.id}>
+                  <div className='cards'>
+                    <h6 className='card-header'>{item.title}</h6>
+                    <p className='card-text'>{item.content}</p>
+                  </div>
+                </div>
+              ))
+            }
 
           </div>
         </div>
       </section>
 
-      
+
     </div>
   )
 }
