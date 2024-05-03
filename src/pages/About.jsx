@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import '../assets/css/about.css'
 import komanda_image from '../assets/images/about-page-img/komanda-pic.png'
 import HomeServicesCard from '../components/HomeServicesCard';
@@ -9,7 +9,28 @@ import TeamCard from '../components/TeamCard';
 import { ApiContext } from '../context/ApiContext';
 
 const About = () => {
-  const { statistic } = useContext(ApiContext);
+  const { statistic, projects, team } = useContext(ApiContext);
+  const [shownTeamData, setShownTeamData] = useState([]);
+  const [visibleTeamCount, setVisibleTeamCount] = useState(2);
+
+  useEffect(() => {
+    setShownTeamData(team.slice(0, visibleTeamCount));
+  }, [team, visibleTeamCount]);
+
+  const handleLoadMoreTeam = () => {
+    setVisibleTeamCount(team.length);
+  };
+
+  const [shownProjectData, setShownProjectData] = useState([]);
+  const [visibleProjectCount, setVisibleProjectCount] = useState(2);
+
+  useEffect(() => {
+    setShownProjectData(projects.slice(0, visibleProjectCount));
+  }, [projects, visibleProjectCount]);
+
+  const handleLoadMoreProject = () => {
+    setVisibleProjectCount(projects.length);
+  };
   return (
     <div className='about'>
       <section className='about-page mb-5'>
@@ -47,7 +68,7 @@ const About = () => {
 
             {
               statistic.map((item) => (
-                <div className='col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6'>
+                <div className='col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6' key={item.id}>
                   <div className='card border-0'>
                     <div className='card-content'>
                       <h5 className='card-text'>{item.key}</h5>
@@ -69,12 +90,49 @@ const About = () => {
       </section>
 
       <section className='about-team mb-5'>
-        <TeamCard />
+        <div className="container">
+          <div className="g-5 py-5">
+            <div className="">
+              <h5 className="main-title pb-4">FortunaMedia <br /> komandası:</h5>
+            </div>
+            <div className="row">
+              {
+                shownTeamData.map((item) => (
+                  <TeamCard alldata={item} key={item.id}/>
+                ))
+              }
+            </div>
+          </div>
+          {shownTeamData.length < team.length ? (
+            <div className='text-center py-5'>
+              <a className='fm-portfolio-link' onClick={handleLoadMoreTeam}>Daha çox</a>
+            </div>
+          ) : null}
+        </div>
+
       </section>
 
-      <section className='mb-5'>
-        <PortfolioCard />
-      </section>
+      <div className='mb-5'>
+        <div className='fm-portfolio-card'>
+          <div className="container">
+            <div className='fm-portfolio-card-head pb-5'>
+              <h5>Portfoliomuz</h5>
+            </div>
+            <div className="row g-4">
+              {shownProjectData.map((item) => (
+                <PortfolioCard alldata={item} key={item.id} />
+              ))}
+            </div>
+
+            {shownProjectData.length < projects.length ? (
+            <div className='text-center py-5'>
+              <a className='fm-portfolio-link' onClick={handleLoadMoreProject}>Daha çox</a>
+            </div>
+          ) : null}
+           
+          </div>
+        </div>
+      </div>
 
       <section className='fm-project-contact'>
         <div className="container">

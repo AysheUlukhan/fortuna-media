@@ -1,27 +1,22 @@
 import React, { useContext } from 'react';
 import { LuChevronLeft } from "react-icons/lu";
 import '../assets/css/blogdetail.css';
-// import card_one from '../assets/images/blog-page-img/blog-card-one.png';
-// import card_two from '../assets/images/blog-page-img/blog-card-2.png';
 import { NavLink, useParams } from 'react-router-dom';
 import { ApiContext } from '../context/ApiContext';
 const BlogDetail = () => {
-    const {blog} = useContext(ApiContext);
+    const { blog } = useContext(ApiContext);
     const { id } = useParams();
-    console.log(id);
-    console.log(blog);
-    const blogDetails = blog.find(p=>p.id === id)
+    const blogId = Number(id);
+    const blogDetails = blog.find(p => p.id === blogId);
 
     return (
         <div className='fm-blog-detail'>
             <section className='fm-bd-hero mb-5 py-5'>
                 <div className='container py-5'>
                     <div className='fm-bd-nav d-flex align-items-center pb-5 gap-3'>
-                        <LuChevronLeft /> <a href="/blog">Bloq</a> <div className='fm-point'></div> <p className='mb-0'>Designing for Apple Vision Pro: </p>
+                        <LuChevronLeft /> <a href="/blog">Bloq</a> <div className='fm-point'></div> <p className='mb-0'>{blogDetails?.title} </p>
                     </div>
-                    <div className='fm-hero-content col-lg-6'>
-                        <h5>Designing for Apple Vision Pro: </h5>
-                    </div>
+                    
                 </div>
             </section>
 
@@ -32,8 +27,9 @@ const BlogDetail = () => {
                             <article className="fm-blog-post">
                                 <img src={blogDetails?.image} className="w-100 d-block mx-lg-auto img-fluid dblog-img" alt="" />
                                 <div className="py-3">
-                                    <span></span> | <span></span>
+                                    <span>{blogDetails?.show_date}</span>
                                     <h2 className="pt-4">{blogDetails?.title}</h2>
+                                    <p dangerouslySetInnerHTML={{ __html: blogDetails?.content }}></p>
                                 </div>
                             </article>
                         </div>

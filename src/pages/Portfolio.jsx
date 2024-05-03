@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import '../assets/css/portfolio.css';
-import portfolio_1 from '../assets/images/portfolio-page-img/portfolio-1.png'
-import portfolio_2 from '../assets/images/portfolio-page-img/portfolio.2.png'
-import portfolio_3 from '../assets/images/portfolio-page-img/portfolio-3.png'
-import portfolio_4 from '../assets/images/portfolio-page-img/portfolio-4.png'
-import portfolio_5 from '../assets/images/portfolio-page-img/portfolio-5.png'
-
+import { ApiContext } from '../context/ApiContext';
+import { NavLink } from 'react-router-dom';
+import PortfolioCard from '../components/PortfolioCard';
 
 const Portfolio = () => {
+  const { projects, services } = useContext(ApiContext);
+  const [shownData, setShownData] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(2);
+
+  useEffect(() => {
+    setShownData(projects.slice(0, visibleCount));
+  }, [projects, visibleCount]);
+
+  const handleLoadMore = () => {
+    setVisibleCount(projects.length);
+  };
+
+  const handleFilter = (serviceTitle) => {
+    const filteredProjects = projects.filter((project) => project.service.service_title === serviceTitle);
+    setShownData(filteredProjects.slice(0, visibleCount));
+  }
+
   return (
     <div className='fm-portfolio'>
       <section className='fm-hero mb-5 py-5'>
@@ -27,80 +41,31 @@ const Portfolio = () => {
         <div className="container">
           <div className='fm-category-head scrollable-list'>
             <ul className='d-flex justify-content-between gap-3'>
-              <li>Dizayn</li>
-              <li>Brendinq</li>
-              <li>TV& Radio Laihələr</li>
-              <li>Marketinq</li>
-              <li>PR &Media</li>
-              <li>Veb&Mobil Dizayn</li>
+              {services.length > 0 && services.map((item) => (
+                <li key={item.id}>
+                  <span onClick={() => handleFilter(item.service_title)}>{item.service_title}</span>
+                </li>
+              ))}
             </ul>
           </div>
           <div className='py-5'>
-            <div className="row row-gap-4">
-              <a href='/PortfolioDetail' className='col-lg-3 col-xl-3 col-md-4 col-sm-6 col-6 '>
-                <div className='card'>
-                  <div className='text-center '>
-                    <img src={portfolio_1} alt="" />
-                    <div className='pt-4'>
-                      <h5>Şirvanşahlar Residence</h5>
-                    </div>
-                  </div>
+            <div className='fm-portfolio-card'>
+              <div className="container">
+                <div className='fm-portfolio-card-head pb-5'>
+                  <h5>Portfoliomuz</h5>
                 </div>
-              </a>
+                <div className="row g-4">
+                  {shownData.map((item) => (
 
-              <a href='/PortfolioDetail' className='col-lg-3 col-xl-3 col-md-4 col-sm-6 col-6'>
-                <div className='card'>
-                  <div className='text-center '>
-                    <img src={portfolio_1} alt="" />
-                    <div className='pt-4'>
-                      <h5>Şirvanşahlar Residence</h5>
-                    </div>
-                  </div>
+                    <PortfolioCard alldata={item} key={item.id}/>
+                  ))}
                 </div>
-              </a>
-
-              <a href='/PortfolioDetail' className='col-lg-3 col-xl-3 col-md-4 col-sm-6 col-6'>
-                <div className='card'>
-                  <div className='text-center '>
-                    <img src={portfolio_1} alt="" />
-                    <div className='pt-4'>
-                      <h5>Şirvanşahlar Residence</h5>
-                    </div>
+                {shownData.length < projects.length && (
+                  <div className='text-center py-5'>
+                    <a className='fm-portfolio-link' onClick={handleLoadMore}>Daha çox</a>
                   </div>
-                </div>
-              </a>
-
-              <a href='/PortfolioDetail' className='col-lg-3 col-xl-3 col-md-4 col-sm-6 col-6'>
-                <div className='card'>
-                  <div className='text-center '>
-                    <img src={portfolio_1} alt="" />
-                    <div className='pt-4'>
-                      <h5>Şirvanşahlar Residence</h5>
-                    </div>
-                  </div>
-                </div>
-              </a>
-
-              <a href='/PortfolioDetail' className='col-lg-3 col-xl-3 col-md-4 col-sm-6 col-6'>
-                <div className='card'>
-                  <div className='text-center '>
-                    <img src={portfolio_1} alt="" />
-                    <div className='pt-4'>
-                      <h5>Şirvanşahlar Residence</h5>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a href='/PortfolioDetail' className='col-lg-3 col-xl-3 col-md-4 col-sm-6 col-6'>
-                <div className='card'>
-                  <div className='text-center '>
-                    <img src={portfolio_1} alt="" />
-                    <div className='pt-4'>
-                      <h5>Şirvanşahlar Residence</h5>
-                    </div>
-                  </div>
-                </div>
-              </a>
+                )}
+              </div>
             </div>
           </div>
         </div>

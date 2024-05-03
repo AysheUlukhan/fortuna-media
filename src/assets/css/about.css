@@ -83,6 +83,17 @@
     color: #444444;
 }
 
+.about .about-team .card .team-card{
+    padding: 25px 0;
+    height: 300px;
+}
+
+.about .about-team .card .team-card img{
+    width: 159px;
+    border-radius: 50%;
+    border: 2px solid #eaeaea;
+}
+
 
 .about .about-team .card h5{
     font-size: 16px;

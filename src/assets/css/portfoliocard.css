@@ -1,6 +1,14 @@
 .fm-portfolio-card .card{
     height: 280px;
-    padding: 20px 25px;
+    padding: 20px 15px;
+    
+}
+
+.fm-portfolio-card .card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 .fm-portfolio-card .card h5{
@@ -10,7 +18,25 @@
     color: #595959;
 }
 
-.fm-portfolio-link{
+.fm-portfolio-card .card a{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    color: #595959;
+    transition: all 0.5s ease;
+}
+
+.fm-portfolio-card .card:hover{
+    cursor: pointer;
+}
+
+.fm-portfolio-card .card:hover a{
+    color: #ED7F1E;
+}
+
+.fm-portfolio-link {
+    cursor: pointer;
     padding:10px 15px;
     border-radius: 4px;
     background-color: #F5F5F5;

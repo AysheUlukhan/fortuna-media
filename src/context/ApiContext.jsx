@@ -13,6 +13,7 @@ export const ApiProvider = ({ children }) => {
     const [statistic, setStatistic] = useState([]);
     const [services, setServices] = useState([]);
     const [blog, setBlog] = useState([]);
+    const [projects, setProjects] = useState([]);
     
     useEffect(() => {
         const fetchData = async () => {
@@ -32,6 +33,8 @@ export const ApiProvider = ({ children }) => {
                 const response5 = await axios.get(`${BASE_URL}/blogs`);
                 setBlog(response5.data)
 
+                const response6 = await axios.get(`${BASE_URL}/projects`);
+                setProjects(response6.data)
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -40,7 +43,7 @@ export const ApiProvider = ({ children }) => {
     }, [])
 
     return (
-        <ApiContext.Provider value={{ whyus, team, statistic, services, blog }}>
+        <ApiContext.Provider value={{ whyus, team, statistic, services, blog, projects }}>
             {children}
         </ApiContext.Provider>
     )
