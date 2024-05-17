@@ -5,37 +5,40 @@
     background-repeat: no-repeat;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-  }
-  
+
+
+/* Tablet cihazlar üçün media queries */
+@media (min-width: 768px) {
   .section {
-    display: flex;
-    margin-bottom: 20px;
+    flex-direction: row; /* Tablet və daha böyük cihazlar üçün sıra yönü */
+    align-items: center; /* Mərkəzi düzləşdirmə */
   }
-  
-  .left {
+
+  .left, .right {
     flex-direction: row;
   }
-  
+
+  .left img, .right img {
+    width: 50%; /* Tablet cihazlar üçün şəkil ölçüsü */
+  }
+
   .right {
     flex-direction: row-reverse;
   }
-  
-  .section img {
-    width: 40%;
-    margin-right: 20px;
-  }
-  
-  .section.right img {
-    margin-right: 0;
+
+  .right img {
     margin-left: 20px;
+    margin-right: 0;
   }
-  
-  .section div {
-    flex-grow: 1;
+}
+
+/* Desktop cihazlar üçün media queries */
+@media (min-width: 992px) {
+  .section img {
+    width: 40%; /* Desktop cihazlar üçün şəkil ölçüsü */
   }
+}
+
 
 .fm-service .fm-service-page .fm-service-hero-content h2{
     font-size: 56px;
