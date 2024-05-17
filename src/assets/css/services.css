@@ -5,6 +5,38 @@
     background-repeat: no-repeat;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .section {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .left {
+    flex-direction: row;
+  }
+  
+  .right {
+    flex-direction: row-reverse;
+  }
+  
+  .section img {
+    width: 40%;
+    margin-right: 20px;
+  }
+  
+  .section.right img {
+    margin-right: 0;
+    margin-left: 20px;
+  }
+  
+  .section div {
+    flex-grow: 1;
+  }
+
 .fm-service .fm-service-page .fm-service-hero-content h2{
     font-size: 56px;
     line-height: 72px;
