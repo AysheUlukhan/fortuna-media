@@ -3,6 +3,11 @@ import '../assets/css/portfoliodetail.css';
 import { LuChevronLeft } from "react-icons/lu";
 import pd_content_img from "../assets/images/portfolio-page-img/portfolio-detail-contentimg.png";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import {
+    Pagination,
+    A11y,
+    Autoplay,
+} from "swiper/modules";
 import pd_slider_oneimg from '../assets/images/portfolio-page-img/portfolio-detiail-slider-1.png';
 import pd_slider_twoimg from '../assets/images/portfolio-page-img/portfolio-detail-slider-2.png';
 import pd_slider_threeimg from '../assets/images/portfolio-page-img/portfolio-detail-slider-3.png';
@@ -16,10 +21,11 @@ const PortfolioDetail = () => {
     const portfolioId = Number(id);
     const portfolioDetails = projects.find(p => p.id === portfolioId);
 
-    const handleFilter = (serviceTitle) => {
-        const filteredProjects = projects.filter((project) => project.service.service_title === serviceTitle);
-        setShownData(filteredProjects.slice(0, visibleCount));
-      }
+    // const handleFilter = (serviceTitle) => {
+    //     const filteredProjects = projects.filter((project) => project.service.service_title === serviceTitle);
+    //     setShownData(filteredProjects.slice(0, visibleCount));
+    // }
+    // console.log(projects);
     return (
         <div className='fm-portfolio-detail'>
             <section className='fm-detail-hero mb-5 py-5'>
@@ -32,19 +38,19 @@ const PortfolioDetail = () => {
 
             <section className='fm-pd-category'>
                 <div className="container">
-                    <div className='fm-pd-category-head scrollable-list'>
+                    {/* <div className='fm-pd-category-head scrollable-list'>
                         <ul className='d-flex justify-content-between gap-3'>
-                        {services.length > 0 && services.map((item) => (
-                <li key={item.id}>
-                  <span onClick={() => handleFilter(item.service_title)}>{item.service_title}</span>
-                </li>
-              ))}
+                            {services.length > 0 && services.map((item) => (
+                                <li key={item.id}>
+                                    <span onClick={() => handleFilter(item.service_title)}>{item.service_title}</span>
+                                </li>
+                            ))}
                         </ul>
-                    </div>
+                    </div> */}
 
                     <div className="row flex-row-reverse pt-5 fm-pd-content">
                         <div className="col-lg-6">
-                            <img src={portfolioDetails?.image} alt="" className="d-block mx-lg-auto img-fluid" />
+                            <img src={portfolioDetails?.image} alt="" className="d-block mx-lg-auto img-fluid pd-content_img" />
                         </div>
                         <div className="col-lg-6 fm-pd-content-left">
                             <div>
@@ -57,10 +63,12 @@ const PortfolioDetail = () => {
                     <div className="fm-pd-slider pt-5">
                         <Swiper
                             grabCursor={true}
-                            slidesPerView={4}
+                            slidesPerView={1}
                             spaceBetween={10}
+                            modules={[Autoplay]}
+                            autoplay={{ delay: 1000 }}
+                            speed={2000}
                             loop={true}
-
                             breakpoints={{
                                 0: {
                                     spaceBetween: 10,
@@ -86,42 +94,12 @@ const PortfolioDetail = () => {
                                 },
                             }}
                         >
-                            {
-                                projects?.all_images?.map((item) => (
+                            {portfolioDetails?.all_images.map(image => (
+                                <SwiperSlide>
+                                    <img key={image.id} className='fm-pd-slider' src={image.image} alt={image.project_title} />
 
-                                    <SwiperSlide>
-                                        <div>
-                                            <img src={item.image} alt="" />
-                                        </div>
-                                    </SwiperSlide>
-                                ))
-                            }
-
-                            {/* <SwiperSlide>
-                                <div>
-                                    <img src={pd_slider_twoimg} alt="" />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div>
-                                    <img src={pd_slider_threeimg} alt="" />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div>
-                                    <img src={pd_slider_oneimg} alt="" />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div>
-                                    <img src={pd_slider_oneimg} alt="" />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div>
-                                    <img src={pd_slider_oneimg} alt="" />
-                                </div>
-                            </SwiperSlide> */}
+                                </SwiperSlide>
+                            ))}
 
                         </Swiper>
                     </div>

@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import '../assets/css/home.css'
 import HomeServicesCard from '../components/HomeServicesCard'
 import { ApiContext } from '../context/ApiContext'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   const { whyus } = useContext(ApiContext);
@@ -16,7 +17,7 @@ const Home = () => {
             <p>Biz işinizin tələblərinə cavab vermək üçün dizayn və brendinq həlləri ilə başlayaraq təsirli rəqəmsal marketinq, PR&media, TV&Radio xidmətləri təklif edən dinamik  bir şirkətik.</p>
           </div>
           <div className='text-center'>
-            <a href='#'>Müraciət et</a>
+            <Link to='/contact'>Müraciət et</Link>
           </div>
         </div>
       </section>

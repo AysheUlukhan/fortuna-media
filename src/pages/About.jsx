@@ -7,6 +7,7 @@ import project_contact from '../assets/images/about-page-img/project-contact.png
 import PortfolioCard from '../components/PortfolioCard';
 import TeamCard from '../components/TeamCard';
 import { ApiContext } from '../context/ApiContext';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const { statistic, projects, team } = useContext(ApiContext);
@@ -21,16 +22,16 @@ const About = () => {
     setVisibleTeamCount(team.length);
   };
 
-  const [shownProjectData, setShownProjectData] = useState([]);
-  const [visibleProjectCount, setVisibleProjectCount] = useState(2);
+  // const [shownProjectData, setShownProjectData] = useState([]);
+  // const [visibleProjectCount, setVisibleProjectCount] = useState(2);
 
-  useEffect(() => {
-    setShownProjectData(projects.slice(0, visibleProjectCount));
-  }, [projects, visibleProjectCount]);
+  // useEffect(() => {
+  //   setShownProjectData(projects.slice(0, visibleProjectCount));
+  // }, [projects, visibleProjectCount]);
 
-  const handleLoadMoreProject = () => {
-    setVisibleProjectCount(projects.length);
-  };
+  // const handleLoadMoreProject = () => {
+  //   setVisibleProjectCount(projects.length);
+  // };
   return (
     <div className='about'>
       <section className='about-page mb-5'>
@@ -41,7 +42,7 @@ const About = () => {
             <p>Biz işinizin tələblərinə cavab vermək üçün dizayn və brendinq həlləri ilə başlayaraq təsirli rəqəmsal marketinq, PR&media, TV&Radio xidmətləri təklif edən dinamik  bir şirkətik.</p>
           </div>
           <div className='text-center'>
-            <a href='#'>Müraciət et</a>
+          <Link to='/contact'>Müraciət et</Link>
           </div>
         </div>
       </section>
@@ -119,16 +120,16 @@ const About = () => {
               <h5>Portfoliomuz</h5>
             </div>
             <div className="row g-4">
-              {shownProjectData.map((item) => (
+              {projects.slice(0,4).map((item) => (
                 <PortfolioCard alldata={item} key={item.id} />
               ))}
             </div>
 
-            {shownProjectData.length < projects.length ? (
+            
             <div className='text-center py-5'>
-              <a className='fm-portfolio-link' onClick={handleLoadMoreProject}>Daha çox</a>
+              <Link to={'/portfolio'} className='fm-portfolio-link'>Daha çox</Link>
             </div>
-          ) : null}
+        
            
           </div>
         </div>
@@ -140,7 +141,7 @@ const About = () => {
             <div className="col-lg-6 col-md-6 col-sm-12 col-12 fm-project-contact-content">
               <div className='pt-5'>
                 <h5 className='pb-5'>Layihən var?</h5>
-                <a className='fm-contact-link' href="#">Müraciət et</a>
+                <Link to='/Contact' className='fm-contact-link'>Müraciət et</Link>
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">

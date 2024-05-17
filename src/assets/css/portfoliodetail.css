@@ -47,8 +47,11 @@
     color: white;
 }
 
-.fm-portfolio-detail .fm-pd-category .fm-pd-content img {
+.fm-portfolio-detail .fm-pd-category .fm-pd-content .pd-content_img {
     width: 630px;
+    height: 334px;
+    object-fit: cover;
+    border-radius: 6px;
 }
 
 .fm-portfolio-detail .fm-pd-content h5 {
@@ -65,9 +68,12 @@
     color: #979797;
 }
 
-/* .fm-portfolio-detail .fm-pd-category .fm-pd-slider img{
+.fm-portfolio-detail .fm-pd-category .fm-pd-slider img{
     width: 300px;
-} */
+    height: 183px;
+    object-fit: cover;
+    border-radius: 8px;
+}
 
 @media (max-width:992px) {
     .fm-portfolio-detail .fm-pd-category .fm-pd-content img {

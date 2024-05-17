@@ -68,6 +68,10 @@
     color: #979797;
 }
 
+.fm-services-detail p{
+    margin-bottom: 0;
+}
+
 .fm-services-detail .fm-work-list .fm-work-list-hero h5{
     font-size: 40px;
     font-weight: 600;
@@ -103,6 +107,80 @@
 .fm-services-detail .fm-choice .fm-choice-card p{
     max-width: 80%;
 }
+
+.fm-services-detail .accordions{
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0px 0px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.fm-services-detail .accordions .accordion{
+    padding: 10px;
+    border: 1px solid #ED7F1E;
+    border-radius: 20px;
+    
+}
+
+.fm-services-detail .accordions .accordion .accordion-button{
+    outline: none !important;
+}
+
+.accordion-button:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: transparent !important;
+    color: #212529;
+}
+
+.accordion-button:active {
+    background-color: transparent !important;
+}
+
+.accordion-button[data-bs-parent="#accordionFlushExample"]:focus,
+.accordion-button[data-bs-parent="#accordionFlushExample"]:active {
+    background-color: transparent !important;
+}
+
+
+
+.accordion {
+    width: 100%;
+    transition: all .5s ease !important;
+  }
+  
+  .accordion-item {
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    transition: all .5s ease !important;
+  }
+  
+  .accordion-title {
+    background-color: #f1f1f1;
+    padding: 10px;
+    cursor: pointer;
+    transition:  .5s ease !important;
+
+  }
+  
+  .accordion-title.active {
+    background-color: #ccc;
+    transition: .5s ease !important;
+    
+  }
+  
+  .accordion-content {
+    padding: 10px;
+    display: none;
+    overflow: hidden;
+    transition: all .5s !important;
+  }
+  
+  .accordion-content.active {
+    display: block;
+    transition:  .5s ease !important;
+  }
+  
+  
 
 @media (max-width:431px) {
     .fm-services-detail .fm-service-detail-hero .fm-service-detail-hero-content h2{

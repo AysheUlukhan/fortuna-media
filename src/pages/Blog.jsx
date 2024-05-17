@@ -1,11 +1,5 @@
 import React, { useContext, useState } from 'react';
 import '../assets/css/blog.css';
-// import card_one from '../assets/images/blog-page-img/blog-card-one.png';
-// import card_two from '../assets/images/blog-page-img/blog-card-2.png';
-// import card_three from '../assets/images/blog-page-img/blog-card-3.png';
-// import card_four from '../assets/images/blog-page-img/blog-card-4.png';
-// import card_five from '../assets/images/blog-page-img/blog-card-5.png';
-// import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { NavLink } from 'react-router-dom';
 import { ApiContext } from '../context/ApiContext';

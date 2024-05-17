@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import '../assets/css/portfolio.css';
 import { ApiContext } from '../context/ApiContext';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import PortfolioCard from '../components/PortfolioCard';
 
 const Portfolio = () => {
@@ -32,7 +32,7 @@ const Portfolio = () => {
             <p>Məqsədi təyin etmək, hədəf auditoriyasını başa düşmək, birləşmiş identitet və mesaj yaratmaq, müvafiqliyi təmin etmək bu strateyaya daxil olan əsas mərhələlərdir. </p>
           </div>
           <div className='text-center'>
-            <a className='fm-contactlink' href='#'>Müraciət et</a>
+          <Link to='/contact'>Müraciət et</Link>
           </div>
         </div>
       </section>

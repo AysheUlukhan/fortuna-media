@@ -12,7 +12,7 @@ const HomeServicesCard = () => {
                     {
                         services.map((item) => (
                             <div className='col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 cards' key={item.id}>
-                                <NavLink to={'/servicesDetail'} className="banner-card " >
+                                <NavLink to={`/servicesDetail/${item.id}`}  className="banner-card " >
                                     <img src={item.image} alt="" className="d-block mx-lg-auto img-fluid banner-img" />
                                     <div className='banner-text'>
                                         <h6>{item.service_title}</h6>

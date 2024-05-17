@@ -3,11 +3,15 @@ import { LuChevronLeft } from "react-icons/lu";
 import '../assets/css/blogdetail.css';
 import { NavLink, useParams } from 'react-router-dom';
 import { ApiContext } from '../context/ApiContext';
+
 const BlogDetail = () => {
     const { blog } = useContext(ApiContext);
     const { id } = useParams();
     const blogId = Number(id);
     const blogDetails = blog.find(p => p.id === blogId);
+
+    
+    const latestBlogs = blog.slice(-3).reverse();
 
     return (
         <div className='fm-blog-detail'>
@@ -16,7 +20,6 @@ const BlogDetail = () => {
                     <div className='fm-bd-nav d-flex align-items-center pb-5 gap-3'>
                         <LuChevronLeft /> <a href="/blog">Bloq</a> <div className='fm-point'></div> <p className='mb-0'>{blogDetails?.title} </p>
                     </div>
-                    
                 </div>
             </section>
 
@@ -33,29 +36,29 @@ const BlogDetail = () => {
                                 </div>
                             </article>
                         </div>
-                        {/* <div className='col-lg-4 col-xl-4 col-sm-12 col-12 left-related-posts'>
+
+                        <div className='col-lg-4 col-xl-4 col-sm-12 col-12 left-related-posts'>
                             <div>
                                 <div className="related-posts pb-3">
-                                    <h4>Əlaqədar Yazılar</h4>
+                                    <h4>Ən son xəbərlər</h4>
                                 </div>
-
                                 <ul>
-                                    <NavLink className="text-decoration-none">
-                                        <div className="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top">
-                                            <img src={card_two} className="d-block mx-lg-auto img-fluid dblog-img" alt="" />
-
-                                            <div className="col-lg-10">
-                                                <small className="text-body-secondary">
-                                                    <span>djcsd</span> | 894
-                                                </small>
-                                                <h6 className="mb-0">Ayıq sürücü xidməti</h6>
+                                    {latestBlogs.map((latestBlog) => (
+                                        <NavLink to={`/blogDetail/${latestBlog.id}`} className="text-decoration-none" key={latestBlog.id}>
+                                            <div className="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top">
+                                                <img src={latestBlog.image} className="d-block mx-lg-auto img-fluid latest-img" alt="" />
+                                                <div className="col-lg-10">
+                                                    <small className="text-body-secondary">
+                                                        <span>{latestBlog.show_date}</span>
+                                                    </small>
+                                                    <h6 className="mb-0">{latestBlog.title}</h6>
+                                                </div>
                                             </div>
-                                        </div>
-
-                                    </NavLink>
+                                        </NavLink>
+                                    ))}
                                 </ul>
                             </div>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -63,4 +66,4 @@ const BlogDetail = () => {
     )
 }
 
-export default BlogDetail
+export default BlogDetail;

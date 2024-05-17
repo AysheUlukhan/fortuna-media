@@ -49,6 +49,18 @@
     line-height: 24px;
 }
 
+.fm-contact .fm-contact-form form select {
+    border-radius: 4px;
+    border: 1px solid #DBDBDB;
+    padding: 10px 8px;
+    outline: none;
+    background-color: #FDFDFD;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
 .fm-contact .fm-contact-form form input::placeholder {
     font-size: 16px;
     font-weight: 400;
@@ -61,6 +73,10 @@
     font-size: 48px;
     line-height: 58.51px;
 
+}
+
+option:hover{
+    background-color: #ED7F1E !important;
 }
 
 .fm-contact .fm-contact-form textarea {
