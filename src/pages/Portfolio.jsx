@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import '../assets/css/portfolio.css';
 import { ApiContext } from '../context/ApiContext';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PortfolioCard from '../components/PortfolioCard';
 
 const Portfolio = () => {
@@ -18,8 +18,12 @@ const Portfolio = () => {
   };
 
   const handleFilter = (serviceTitle) => {
-    const filteredProjects = projects.filter((project) => project.service.service_title === serviceTitle);
-    setShownData(filteredProjects.slice(0, visibleCount));
+    if (serviceTitle === 'All') {
+      setShownData(projects.slice(0, visibleCount));
+    } else {
+      const filteredProjects = projects.filter((project) => project.service.service_title === serviceTitle);
+      setShownData(filteredProjects.slice(0, visibleCount));
+    }
   }
 
   return (
@@ -32,7 +36,7 @@ const Portfolio = () => {
             <p>Məqsədi təyin etmək, hədəf auditoriyasını başa düşmək, birləşmiş identitet və mesaj yaratmaq, müvafiqliyi təmin etmək bu strateyaya daxil olan əsas mərhələlərdir. </p>
           </div>
           <div className='text-center'>
-          <Link to='/contact'>Müraciət et</Link>
+            <Link to='/contact'>Müraciət et</Link>
           </div>
         </div>
       </section>
@@ -41,6 +45,9 @@ const Portfolio = () => {
         <div className="container">
           <div className='fm-category-head scrollable-list'>
             <ul className='d-flex justify-content-between gap-3'>
+              <li>
+                <span onClick={() => handleFilter('All')}>All</span>
+              </li>
               {services.length > 0 && services.map((item) => (
                 <li key={item.id}>
                   <span onClick={() => handleFilter(item.service_title)}>{item.service_title}</span>
@@ -56,7 +63,6 @@ const Portfolio = () => {
                 </div>
                 <div className="row g-4">
                   {shownData.map((item) => (
-
                     <PortfolioCard alldata={item} key={item.id}/>
                   ))}
                 </div>
@@ -74,4 +80,4 @@ const Portfolio = () => {
   )
 }
 
-export default Portfolio
+export default Portfolio;
