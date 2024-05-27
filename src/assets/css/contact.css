@@ -75,7 +75,7 @@
 
 }
 
-option:hover{
+option:hover {
     background-color: #ED7F1E !important;
 }
 
@@ -85,4 +85,43 @@ option:hover{
     border: 1px solid #C3C3C3;
     outline: none;
     border-radius: 4px;
+}
+
+.fm-contact .ant-select {
+    height: 47px;
+}
+
+
+.ant-select-item-option-active {
+    color: white !important;
+    background-color: #ED7F1E !important;
+
+}
+
+.ant-select-item-option-selected {
+    background-color: #ED7F1E;
+}
+
+
+:where(.css-dev-only-do-not-override-17seli4).ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    color: white;
+    background-color: #ED7F1E;
+}
+
+
+:where(.css-dev-only-do-not-override-1r287do).ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    color: white;
+    background-color: #ED7F1E;
+}
+
+
+:where(.css-dev-only-do-not-override-1r287do).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
+    border-color: #DBDBDB;
+}
+
+
+.ant-select-focused:where(.css-dev-only-do-not-override-lr287d0).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) .ant-select-selector {
+    border-color: #ed7f1e !important;
+    box-shadow: 0 0 0 2px rgba(251, 152, 2, 0.1) !important;
+    outline: 0;
 }

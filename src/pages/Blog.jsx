@@ -1,11 +1,15 @@
 import React, { useContext, useState } from 'react';
 import '../assets/css/blog.css';
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { ApiContext } from '../context/ApiContext';
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { BsArrowRight } from "react-icons/bs";
+
 
 const Blog = () => {
   const { blog } = useContext(ApiContext);
+  console.log(blog);
   const [currentPage, setCurrentPage] = useState(1);
   const [search, setSearch] = useState('');
   const recordsPerPage = 6;
@@ -55,17 +59,33 @@ const Blog = () => {
           </div>
 
           <div className="row row-gap-4 pt-4">
-          {
-            records.filter((item)=>{
-              return search.toString().toLowerCase() === '' ? item : item.title.toString().toLowerCase().includes(search);
-            }).map((item) => (
+            {
+              records.filter((item) => {
+                return search.toString().toLowerCase() === '' ? item : item.title.toString().toLowerCase().includes(search);
+              }).map((item) => (
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 " key={item.id}>
-                  <NavLink to={`/blogDetail/${item.id}`} className='card'>
+                  {/* <NavLink to={`/blogDetail/${item.id}`} className='card'>
                     <img src={item.image} alt="" className="d-block mx-lg-auto img-fluid w-100" />
                     <div className='text'>
                       <h5>{item.title}</h5>
                     </div>
-                  </NavLink>
+                  </NavLink> */}
+
+                  <div className="card">
+                    <div className='card-img'>
+                      <img src={item.image} className="w-100 d-block mx-lg-auto img-fluid" alt="" />
+                    </div>
+                    <div className='card-content pt-4'>
+                      <div className='content-head'>
+                        <p className='d-flex align-items-center gap-2'><FaRegCalendarAlt /><span>{item.show_date}</span></p>
+                      </div>
+                      <div className='content-medium pt-3'>
+                        <h6>{item.title}</h6>
+                        <div dangerouslySetInnerHTML={{ __html: `${item.content.slice(0, 80)}...` }} />
+                        <Link to={`/blogDetail/${item.id}`} className='d-flex gap-2 align-items-center pt-3'>Read more <BsArrowRight /></Link>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ))
             }

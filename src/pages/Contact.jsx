@@ -28,23 +28,23 @@ const Contact = () => {
 
     if (!formData.fullname) {
       isValid = false;
-      validationError.fullname = "Adinizi və soyadinizi yazin";
+      validationError.fullname = "Ad və Soyad daxil edin!";
     }
     if (!formData.email) {
       isValid = false;
-      validationError.email = "Email adresinizi yazin";
+      validationError.email = "Emaili daxil edin!";
     }
     if (!formData.phone) {
       isValid = false;
-      validationError.phone = "Telefon nomresinini yazin";
+      validationError.phone = "Telefon nömrənizi daxil edin!";
     }
     if (!formData.service) {
       isValid = false;
-      validationError.service = "Bos buraxmayin";
+      validationError.service = "Servis seçin!";
     }
     if (!formData.project) {
       isValid = false;
-      validationError.project = "Bos buraxmayin";
+      validationError.project = "Boş buraxmayın!";
     }
 
     setErrors(validationError);
@@ -106,7 +106,7 @@ const Contact = () => {
         <div className="container">
           <h5>Layihən var?</h5>
           <div className="row g-5 mt-4">
-            <div className="col-lg-6">
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <form onSubmit={handleSubmit}>
                 <div className='d-flex flex-column mb-3'>
                   <label className='mb-2'>Ad Soyad</label>
@@ -169,7 +169,7 @@ const Contact = () => {
                 </div>
               </form>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div>
                 <img src={contact_hero} className="d-block mx-lg-auto img-fluid w-100" alt="" />
               </div>
