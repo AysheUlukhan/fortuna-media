@@ -32,7 +32,7 @@ const BlogDetail = () => {
                                 <div className="py-3">
                                     <span>{blogDetails?.show_date}</span>
                                     <h2 className="pt-4">{blogDetails?.title}</h2>
-                                    <p dangerouslySetInnerHTML={{ __html: blogDetails?.content }}></p>
+                                    <p dangerouslySetInnerHTML={{ __html: blogDetails?.content}}></p>
                                 </div>
                             </article>
                         </div>

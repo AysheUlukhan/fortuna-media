@@ -81,7 +81,7 @@ const Contact = () => {
   return (
     <div className='fm-contact'>
       <section className='fm-contact-hero w-100 mb-5 py-5 position-relative'>
-        <div className='container py-5 position-absolute bottom-0 '>
+        <div className='container-fluid py-5 position-absolute bottom-0 '>
           <div className='d-flex justify-content-center flex-wrap gap-5 '>
             <div className='text-center '>
               <div className='fm-content-info py-2'>
