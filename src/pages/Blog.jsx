@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import '../assets/css/blog.css';
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ApiContext } from '../context/ApiContext';
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
@@ -21,7 +21,6 @@ const Blog = () => {
 
   const numbers = [...Array(npage + 1).keys()].slice(1);
 
-
   function prePage() {
     if (currentPage !== 1) {
       setCurrentPage(currentPage - 1);
@@ -37,6 +36,11 @@ const Blog = () => {
       setCurrentPage(currentPage + 1);
     }
   }
+
+  // Filter records based on search query
+  const filteredRecords = records.filter((item) => {
+    return search.toLowerCase() === '' ? item : item.title.toLowerCase().includes(search);
+  });
 
   return (
     <div className='fm-blog'>
@@ -59,18 +63,9 @@ const Blog = () => {
           </div>
 
           <div className="row row-gap-4 pt-4">
-            {
-              records.filter((item) => {
-                return search.toString().toLowerCase() === '' ? item : item.title.toString().toLowerCase().includes(search);
-              }).map((item) => (
+            {filteredRecords.length > 0 ? (
+              filteredRecords.map((item) => (
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 " key={item.id}>
-                  {/* <NavLink to={`/blogDetail/${item.id}`} className='card'>
-                    <img src={item.image} alt="" className="d-block mx-lg-auto img-fluid w-100" />
-                    <div className='text'>
-                      <h5>{item.title}</h5>
-                    </div>
-                  </NavLink> */}
-
                   <div className="card">
                     <div className='card-img'>
                       <img src={item.image} className="w-100 d-block mx-lg-auto img-fluid" alt="" />
@@ -88,7 +83,11 @@ const Blog = () => {
                   </div>
                 </div>
               ))
-            }
+            ) : (
+              <div className="col-12">
+                <p>Məlumat tapılmadı..</p>
+              </div>
+            )}
 
             {blog.length > recordsPerPage && (
               <ul className='d-flex justify-content-center gap-4 pt-5'>
@@ -111,14 +110,11 @@ const Blog = () => {
                 </li>
               </ul>
             )}
-
-
           </div>
-
         </div>
       </section>
     </div>
   )
 }
 
-export default Blog
+export default Blog;

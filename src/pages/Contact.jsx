@@ -6,6 +6,8 @@ import axios from 'axios';
 import { BASE_URL } from '../api/Api';
 import { ApiContext } from '../context/ApiContext';
 import { Select } from 'antd';
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const { Option } = Select;
 
@@ -17,9 +19,10 @@ const Contact = () => {
     service: '',
     project: '',
   });
-  const { services } = useContext(ApiContext);
+  const { services, contact_info } = useContext(ApiContext);
   const [errors, setErrors] = useState({});
   const [valid, setValid] = useState(true);
+  console.log(contact_info);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -61,7 +64,8 @@ const Contact = () => {
 
       axios.post(`${BASE_URL}/contact_us/`, req)
         .then(result => {
-          alert("Mesajınız gönderildi");
+          // alert("Mesajınız gönderildi");
+          toast.success("Mesajınız göndərildi");
           setFormData({
             fullname: "",
             email: "",
@@ -81,21 +85,28 @@ const Contact = () => {
           <div className='d-flex justify-content-center flex-wrap gap-5 '>
             <div className='text-center '>
               <div className='fm-content-info py-2'>
-                <img className='pb-2' src={location} alt="" />
-                <p>Bakı, Azərbaycan <br /> Səbail ray., ISR Plaza</p>
+                <div className='d-flex flex-column justify-content-center align-items-center'>
+                  <img className='pb-2' src={location} alt="" />
+                  <p>{contact_info[0]?.location_name}</p>
+                </div>
               </div>
             </div>
             <div className='text-center'>
               <div className='fm-content-info py-2'>
-                <img src={location} alt="" className='pb-2' />
-                <p className='mb-0'>+994 51 123 45 56</p>
-                <p className='mb-0'>+994 51 123 45 78</p>
+                <div className='d-flex flex-column justify-content-center align-items-center'>
+                  <img src={location} alt="" className='pb-2' />
+                  <a href={`tel:${contact_info[0]?.phone[0]?.phone}`} className='fs-18'>{contact_info[0]?.phone[0]?.phone}</a>
+                </div>
+
+
               </div>
             </div>
             <div className='text-center'>
               <div className='fm-content-info py-2'>
-                <img className='pb-2' src={location} alt="" />
-                <p>office@fortunamedia.az</p>
+                <div className='d-flex flex-column justify-content-center align-items-center'>
+                  <img className='pb-2' src={location} alt="" />
+                  <a href={`mailto:${contact_info[0]?.email[0]?.email}`} className='fs-18'>{contact_info[0]?.email[0]?.email}</a>
+                </div>
               </div>
             </div>
           </div>
@@ -169,9 +180,9 @@ const Contact = () => {
                 </div>
               </form>
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12 contact_info_img">
               <div>
-                <img src={contact_hero} className="d-block mx-lg-auto img-fluid w-100" alt="" />
+                <img src={contact_info[0]?.image} className="d-block mx-lg-auto img-fluid w-100" alt="" />
               </div>
             </div>
           </div>
@@ -182,3 +193,8 @@ const Contact = () => {
 }
 
 export default Contact;
+
+
+
+
+
