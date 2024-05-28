@@ -51,7 +51,7 @@ const About = () => {
         <div className="container py-5">
           <div className="row align-items-center row-gap-4 py-5">
             <div className="col-lg-6 col-12 col-sm-12">
-              <h5 className="main-title pb-4">Fortuna Media</h5>
+              <h5 className="main-title pb-4">Haqqımızda</h5>
               <p className="sub-title">Biz işinizin tələblərinə cavab vermək üçün dizayn və brendinq həlləri ilə başlayaraq təsirli rəqəmsal marketinq, PR&media, TV&Radio xidmətləri təklif edən dinamik  bir şirkətik.</p>
               <p className="sub-title">Biz işimizdə peşəkarlığı, səmimi əzmləri və işə məsuliyyət hissini nümayiş etdirən şəxsləri seçdik və Azərbaycanın gələcəyində adını duyuracaq bir komanda ilə xidmət verməyə className.</p>
               <p className="sub-title">Biz başladıqda, hər bir qrupun inkişafı üçün əsas prinsip kimi müştəri razıqəliyini seçdik. Bu istiqamətdə addım atmağımız, yalnız bir təminat deyil, hər bir təşəbbüsümüzdə əla nəticələr əldə etməyə sürükləyən bir güc kimi təsir etməkdədir.</p>
@@ -94,7 +94,7 @@ const About = () => {
         <div className="container">
           <div className="g-5 py-5">
             <div className="">
-              <h5 className="main-title pb-4">FortunaMedia <br /> komandası:</h5>
+              <h5 className="main-title pb-4">Komandamız</h5>
             </div>
             <div className="row">
               {
@@ -116,8 +116,8 @@ const About = () => {
       <div className='mb-5'>
         <div className='fm-portfolio-card'>
           <div className="container">
-            <div className='fm-portfolio-card-head pb-5'>
-              <h5>Portfoliomuz</h5>
+            <div className='fm-portfolio-card-head text-center pb-5'>
+              <h5 >Portfoliomuz</h5>
             </div>
             <div className="row g-4">
               {projects.slice(0,4).map((item) => (
