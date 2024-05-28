@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import '../assets/css/services.css';
 import { ApiContext } from '../context/ApiContext';
+import { NavLink } from 'react-router-dom';
 
 const Services = () => {
   const { services } = useContext(ApiContext); 
@@ -28,7 +29,7 @@ const Services = () => {
                   <h5 className='pb-4'>{item.service_title}</h5>
                   <p>{item.description}</p>
                   <div className="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <a href='#' className='btn btn-outline-secondary'>Daha çox oxu</a> 
+                    <NavLink to={`/servicesDetail/${item.id}`}className='btn'>Daha çox oxu</NavLink> 
                   </div>
                 </div>
                 <div className="col-12 col-md-6">

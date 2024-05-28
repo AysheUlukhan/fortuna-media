@@ -1,31 +1,66 @@
-.home .hero-page{
+.home .hero-page {
     background-image: url('../images/home-page-img/home-hero.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.home .hero-page .home-hero-content h2{
+.home .hero-page .home-hero-content h2 {
     font-size: 72px;
-     font-weight: 700;
-     line-height: 108px;
-     color: #ED7F1E;
+    font-weight: 700;
+    line-height: 108px;
+    color: #ED7F1E;
 }
 
-.home .hero-page .home-hero-content h3{
+.home .hero-page .home-hero-content .animated-text {
+    height: 72px;
+    overflow: hidden;
+}
+
+.home .hero-page .home-hero-content .animated-text .line:first-child {
+    animation: anim 12s infinite;
+}
+
+@keyframes anim {
+    0%, 10% {
+        margin-top: 0;
+    }
+
+    20%, 30% {
+        margin-top: -72px; 
+    }
+
+    40%, 50% {
+        margin-top: -144px; 
+    }
+
+    60%, 70% {
+        margin-top: -216px; 
+    }
+
+    80%, 90% {
+        margin-top: -288px; 
+    }
+
+    100% {
+        margin-top: 0; 
+    }
+}
+
+.home .hero-page .home-hero-content h3 {
     font-size: 60px;
     font-weight: 500;
     line-height: 90px;
     color: #FCFCFC;
 }
 
-.home .hero-page .home-hero-content p{
+.home .hero-page .home-hero-content p {
     font-weight: 400;
     line-height: 24px;
     color: #ACACAC;
 }
 
-.home .hero-page a{
+.home .hero-page a {
     padding: 12px 25px;
     border-radius: 4px;
     border: none;
@@ -36,21 +71,23 @@
     color: white;
 }
 
-.home .short-about-part h5{
+
+
+.home .short-about-part h5 {
     font-size: 48px;
     font-weight: 700;
     line-height: 58.51px;
     color: #444444;
 }
 
-.home .short-about-part p{
+.home .short-about-part p {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     color: #979797;
 }
 
-.home .services-part-head h6{
+.home .services-part-head h6 {
     font-size: 32px;
     font-weight: 500;
     line-height: 48px;
@@ -86,27 +123,27 @@
     transition: .5s;
 } */
 
-.home .home-why-part .home-why-part-head h5{
+.home .home-why-part .home-why-part-head h5 {
     font-size: 48px;
     font-weight: 700;
     line-height: 58.51px;
     color: #444444;
 }
 
-.home .home-why-part .card-header{
+.home .home-why-part .card-header {
     font-size: 19px;
     font-weight: 500;
     line-height: 32px;
 }
 
-.home .home-why-part .card-text{
+.home .home-why-part .card-text {
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
 }
 
 @media (max-width:576px) {
-    .home .home-why-part .cards{
+    .home .home-why-part .cards {
         text-align: center;
         padding: 0 30px;
     }
