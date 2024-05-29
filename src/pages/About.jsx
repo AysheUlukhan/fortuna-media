@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 const About = () => {
   const { statistic, projects, team } = useContext(ApiContext);
   const [shownTeamData, setShownTeamData] = useState([]);
-  const [visibleTeamCount, setVisibleTeamCount] = useState(2);
+  const [visibleTeamCount, setVisibleTeamCount] = useState(10);
 
   useEffect(() => {
     setShownTeamData(team.slice(0, visibleTeamCount));

@@ -71,6 +71,7 @@
     cursor: pointer;
     transition: all .3s;
     border-radius: 16px;
+    height: 490px;
 }
 
 .fm-blog .card-img {

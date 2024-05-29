@@ -135,6 +135,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={(event) => setFormData({ ...formData, email: event.target.value })}
                     type="email"
+                    placeholder='E-poçta'
                   />
                   {errors.email && <span className='text-danger error'>{errors.email}</span>}
                 </div>
@@ -144,6 +145,7 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={(event) => setFormData({ ...formData, phone: event.target.value })}
                     type="tel"
+                    placeholder=''
                   />
                   {errors.phone && <span className='text-danger error'>{errors.phone}</span>}
                 </div>
