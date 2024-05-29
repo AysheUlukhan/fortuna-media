@@ -25,7 +25,7 @@ const Footer = () => {
               <Link to={contact_info[0]?.facebook} target="_black"><img src={facebook} alt="facebook" className='d-block mx-lg-auto img-fluid icons' /></Link>
               <Link to={contact_info[0]?.instagram} target="_black"><img src={instagram} alt="instagram" className='d-block mx-lg-auto img-fluid icons' /></Link>
                 
-              <Link to={contact_info[0]?.whatsapp} target="_black"><img src={whatsapp} alt="whatsapp" className='d-block mx-lg-auto img-fluid icons' /></Link>
+              <a href={`tel:${contact_info[0]?.phone[0]?.phone}`}  target="_black"><img src={whatsapp} alt="whatsapp" className='d-block mx-lg-auto img-fluid icons' /></a>
                 
               </div>
             </div>

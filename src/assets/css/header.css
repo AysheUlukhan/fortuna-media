@@ -1,44 +1,52 @@
-nav{
+nav {
     background-color: white;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 24px 0px;
 }
 
-nav ul{
+nav ul {
     gap: 50px;
 }
 
-nav ul li a:hover{
+nav .xl_menu li a:hover {
     color: #ED7F1E !important;
     border-bottom: 1px solid #ED7F1E;
 }
 
-nav ul .active {
+nav .xl_menu .active {
     width: 100%;
     color: #ED7F1E !important;
     border-bottom: 1px solid #ED7F1E;
-  }
+}
 
 
-nav img{
+nav .sm_menu:hover{
+    color: #ED7F1E;
+}
+
+nav .sm_menu .active{
+    color: #ED7F1E;
+}
+
+nav img {
     width: 160px;
     /* height: 50px; */
 }
 
-nav .nav-menu{
+nav .nav-menu {
     font-size: 30px;
     cursor: pointer;
 }
 
-nav .offcanvas .offcanvas-header{
+nav .offcanvas .offcanvas-header {
     display: flex;
     justify-content: flex-end;
 }
 
-nav .offcanvas .offcanvas-header .nav-close{
+nav .offcanvas .offcanvas-header .nav-close {
     font-size: 25px;
     cursor: pointer;
 }
 
-nav .offcanvas li{
+nav .offcanvas li {
     height: 50px;
 }

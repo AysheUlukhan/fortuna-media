@@ -22,7 +22,7 @@ const Services = () => {
 
       <section className='fm-service-card'>
         <div className="container px-4 py-5">
-          <div className="row row-gap-5 align-items-center g-5 py-5">
+          <div className="row row-gap-5 align-items-center m-auto g-5 py-5">
             {services.map((item, index) => (
               <div key={index} className={`row row-gap-5 align-items-center mb-4 ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}>
                 <div className="col-md-6">

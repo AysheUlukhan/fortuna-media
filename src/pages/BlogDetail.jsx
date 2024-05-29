@@ -11,7 +11,7 @@ const BlogDetail = () => {
     const blogDetails = blog.find(p => p.id === blogId);
 
     
-    const latestBlogs = blog.slice(-3).reverse();
+    const latestBlogs = blog.slice(-5).reverse();
 
     return (
         <div className='fm-blog-detail'>

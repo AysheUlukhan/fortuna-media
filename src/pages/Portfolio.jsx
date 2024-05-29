@@ -7,7 +7,7 @@ import PortfolioCard from '../components/PortfolioCard';
 const Portfolio = () => {
   const { projects, services } = useContext(ApiContext);
   const [shownData, setShownData] = useState([]);
-  const [visibleCount, setVisibleCount] = useState(2);
+  const [visibleCount, setVisibleCount] = useState(20);
 
   useEffect(() => {
     setShownData(projects.slice(0, visibleCount));
@@ -31,7 +31,7 @@ const Portfolio = () => {
       <section className='fm-hero mb-5 py-5'>
         <div className='container py-5'>
           <div className='fm-hero-content col-lg-6'>
-            <h2><span>Portfelimiz -</span> <br />
+            <h2><span>Portfelimiz</span> <br />
               məmnun müştərilərimizdir</h2>
             <p>Məqsədi təyin etmək, hədəf auditoriyasını başa düşmək, birləşmiş identitet və mesaj yaratmaq, müvafiqliyi təmin etmək bu strateyaya daxil olan əsas mərhələlərdir. </p>
           </div>
@@ -44,13 +44,13 @@ const Portfolio = () => {
       <section className='fm-portfolio-category'>
         <div className="container">
           <div className='fm-category-head scrollable-list'>
-            <ul className='d-flex justify-content-between gap-3'>
+            <ul className='d-flex justify-content-between gap-3 my-5'>
               <li>
-                <span onClick={() => handleFilter('All')}>All</span>
+                <a onClick={() => handleFilter('All')}>All</a>
               </li>
               {services.length > 0 && services.map((item) => (
                 <li key={item.id}>
-                  <span onClick={() => handleFilter(item.service_title)}>{item.service_title}</span>
+                  <a onClick={() => handleFilter(item.service_title)}>{item.service_title}</a>
                 </li>
               ))}
             </ul>

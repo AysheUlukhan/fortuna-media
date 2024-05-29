@@ -77,7 +77,7 @@ const Blog = () => {
                       <div className='content-medium pt-3'>
                         <h6>{item.title}</h6>
                         <div dangerouslySetInnerHTML={{ __html: `${item.content.slice(0, 80)}...` }} />
-                        <Link to={`/blogDetail/${item.id}`} className='d-flex gap-2 align-items-center pt-3'>Read more <BsArrowRight /></Link>
+                        <Link to={`/blogDetail/${item.id}`} className='d-flex gap-2 align-items-center pt-3'>Daha çox <BsArrowRight /></Link>
                       </div>
                     </div>
                   </div>

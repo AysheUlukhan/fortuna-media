@@ -90,6 +90,11 @@
     text-align: center;
 }
 
+.fm-service .fm-service-card img{
+  height: 460px;
+  object-fit: contain;
+}
+
 @media (max-width:992px) {
     .fm-service .fm-service-card img{
         width: 100%;

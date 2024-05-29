@@ -64,7 +64,6 @@ const Contact = () => {
 
       axios.post(`${BASE_URL}/contact_us/`, req)
         .then(result => {
-          // alert("Mesajınız gönderildi");
           toast.success("Mesajınız göndərildi");
           setFormData({
             fullname: "",
@@ -115,9 +114,15 @@ const Contact = () => {
 
       <section className='fm-contact-form'>
         <div className="container">
-          <h5>Layihən var?</h5>
-          <div className="row g-5 mt-4">
+
+          <div className="row align-items-center g-5 mt-4">
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12 contact_info_img">
+              <div>
+                <img src={contact_info[0]?.image} className="d-block mx-lg-auto img-fluid w-100" alt="" />
+              </div>
+            </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+              <h5 className='mb-4'>Layihən var?</h5>
               <form onSubmit={handleSubmit}>
                 <div className='d-flex flex-column mb-3'>
                   <label className='mb-2'>Ad Soyad</label>
@@ -145,7 +150,7 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={(event) => setFormData({ ...formData, phone: event.target.value })}
                     type="tel"
-                    placeholder=''
+                    placeholder='Əlaqə nömrəsi'
                   />
                   {errors.phone && <span className='text-danger error'>{errors.phone}</span>}
                 </div>
@@ -174,6 +179,7 @@ const Contact = () => {
                     value={formData.project}
                     onChange={(event) => setFormData({ ...formData, project: event.target.value })}
                     rows="5"
+                    placeholder=' İdeanızı yazın'
                   ></textarea>
                   {errors.project && <span className='text-danger error'>{errors.project}</span>}
                 </div>
@@ -182,11 +188,7 @@ const Contact = () => {
                 </div>
               </form>
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 col-12 contact_info_img">
-              <div>
-                <img src={contact_info[0]?.image} className="d-block mx-lg-auto img-fluid w-100" alt="" />
-              </div>
-            </div>
+
           </div>
         </div>
       </section>

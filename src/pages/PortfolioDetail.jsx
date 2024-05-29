@@ -21,17 +21,12 @@ const PortfolioDetail = () => {
     const portfolioId = Number(id);
     const portfolioDetails = projects.find(p => p.id === portfolioId);
 
-    // const handleFilter = (serviceTitle) => {
-    //     const filteredProjects = projects.filter((project) => project.service.service_title === serviceTitle);
-    //     setShownData(filteredProjects.slice(0, visibleCount));
-    // }
-    // console.log(projects);
     return (
         <div className='fm-portfolio-detail'>
             <section className='fm-detail-hero mb-5 py-5'>
                 <div className='container py-5'>
-                    <div className='fm-portfolio-detail-nav d-flex align-items-center pb-5 gap-3'>
-                        <LuChevronLeft /> <a href="/portfolio">Portfoliomuz</a> <div className='fm-point'></div> <p className='mb-0'>{portfolioDetails?.project_title}</p>
+                    <div className='fm-portfolio-detail-nav d-flex align-items-center pb-5 gap-2'>
+                         <a href="/portfolio">Portfoliomuz</a> / <p className='mb-0'>{portfolioDetails?.project_title}</p>
                     </div>
                 </div>
             </section>
