@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import '../assets/css/services.css';
 import { ApiContext } from '../context/ApiContext';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Services = () => {
   const { services } = useContext(ApiContext); 
@@ -15,7 +15,7 @@ const Services = () => {
             <p>Biz işinizin tələblərinə cavab vermək üçün dizayn və brendinq həlləri ilə başlayaraq təsirli rəqəmsal marketinq, PR&media, TV&Radio xidmətləri təklif edən dinamik bir şirkətik.</p>
           </div>
           <div className='text-center'>
-            <a href='#' className='btn btn-primary'>Müraciət et</a>  
+            <Link to='/contact'>Müraciət et</Link>
           </div>
         </div>
       </section>
