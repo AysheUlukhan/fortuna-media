@@ -48,7 +48,7 @@ const ServicesDetail = () => {
             <section className='fm-service-detail-hero mb-5 py-5'>
                 <div className='container py-5'>
                     <div className='fm-service-detail-nav d-flex align-items-center pb-5 gap-3'>
-                        <LuChevronLeft /> <Link to="/services">Xidmətlərimiz</Link> <div className='fm-point'></div> <p className='mb-0'>{serviceDetails?.service_title}</p>
+                        <Link to="/services">Xidmətlərimiz</Link>/<p className='mb-0'>{serviceDetails?.service_title}</p>
                     </div>
                     <div className='fm-service-detail-hero-content col-lg-6'>
                         <h2>{serviceDetails?.service_title}</h2>

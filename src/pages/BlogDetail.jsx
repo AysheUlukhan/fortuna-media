@@ -18,7 +18,7 @@ const BlogDetail = () => {
             <section className='fm-bd-hero mb-5 py-5'>
                 <div className='container py-5'>
                     <div className='fm-bd-nav d-flex align-items-center pb-5 gap-3'>
-                        <LuChevronLeft /> <a href="/blog">Bloq</a> <div className='fm-point'></div> <p className='mb-0'>{blogDetails?.title} </p>
+                        <a href="/blog">Bloq</a> / <p className='mb-0'>{blogDetails?.title} </p>
                     </div>
                 </div>
             </section>

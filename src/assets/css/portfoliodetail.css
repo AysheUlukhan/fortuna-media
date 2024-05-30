@@ -14,14 +14,14 @@
 
 .fm-portfolio-detail .fm-detail-hero .fm-portfolio-detail-nav {
     color: #FCFCFC;
-    font-size: 17px;
+    /* font-size: 17px; */
 
 }
 
 .fm-portfolio-detail .fm-detail-hero .fm-portfolio-detail-nav p {
     color: #FCFCFC;
-    /* font-weight: 700; */
     line-height: 20px;
+    font-size: 17px;
 }
 
 .fm-portfolio-detail .fm-detail-hero .fm-portfolio-detail-nav a {
