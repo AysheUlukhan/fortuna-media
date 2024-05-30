@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 import { ApiContext } from '../context/ApiContext';
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
+import { Helmet } from 'react-helmet-async';
 
 
 const Blog = () => {
   const { blog } = useContext(ApiContext);
-  console.log(blog);
   const [currentPage, setCurrentPage] = useState(1);
   const [search, setSearch] = useState('');
   const recordsPerPage = 6;
@@ -37,13 +37,15 @@ const Blog = () => {
     }
   }
 
-  // Filter records based on search query
   const filteredRecords = records.filter((item) => {
     return search.toLowerCase() === '' ? item : item.title.toLowerCase().includes(search);
   });
 
   return (
     <div className='fm-blog'>
+       <Helmet>
+        <title>Fortuna media - bloq</title>
+      </Helmet>
       <section className='fm-hero mb-5 py-5'>
         <div className='container py-5'>
           <div className='fm-hero-content col-lg-6'>

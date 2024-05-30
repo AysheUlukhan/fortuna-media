@@ -6,6 +6,7 @@ import { BASE_URL } from '../api/Api';
 import { ApiContext } from '../context/ApiContext';
 import { Select } from 'antd';
 import { toast } from 'react-toastify';
+import { Helmet } from 'react-helmet-async';
 
 const { Option } = Select;
 
@@ -20,7 +21,6 @@ const Contact = () => {
   const { services, contact_info } = useContext(ApiContext);
   const [errors, setErrors] = useState({});
   const [valid, setValid] = useState(true);
-  console.log(contact_info);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -77,6 +77,9 @@ const Contact = () => {
 
   return (
     <div className='fm-contact'>
+      <Helmet>
+        <title>Fortuna media - əlaqə</title>
+      </Helmet>
       <section className='fm-contact-hero w-100 mb-5 py-5 position-relative'>
         <div className='container-fluid py-5 position-absolute bottom-0 '>
           <div className='d-flex justify-content-center flex-wrap gap-5 '>

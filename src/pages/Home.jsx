@@ -4,19 +4,19 @@ import HomeServicesCard from '../components/HomeServicesCard';
 import { ApiContext } from '../context/ApiContext';
 import { Link } from 'react-router-dom';
 import { TypeAnimation } from 'react-type-animation';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
   const { services } = useContext(ApiContext);
 
-  console.log("Services:", services);
-
   const serviceTitles = services?.map(service => service.service_title) || [];
   const typeAnimationSequence = serviceTitles.flatMap(title => [title, 2000]);
 
-  console.log("Type Animation Sequence:", typeAnimationSequence);
-
   return (
     <div className='home'>
+       <Helmet>
+        <title>Fortuna media - ana səhifə</title>
+      </Helmet>
       <section className="mb-5 hero-page">
         <div className='container py-5'>
           <div className='home-hero-content col-lg-6'>
@@ -33,7 +33,7 @@ const Home = () => {
             <p>Biz işinizin tələblərinə cavab vermək üçün dizayn və brendinq həlləri ilə başlayaraq təsirli rəqəmsal marketinq, PR&media, TV&Radio xidmətləri təklif edən dinamik bir şirkətik.</p>
           </div>
           <div className='text-center'>
-            <Link to='/contact'>Müraciət et</Link>
+            <Link to='/əlaqə'>Müraciət et</Link>
           </div>
         </div>
       </section>

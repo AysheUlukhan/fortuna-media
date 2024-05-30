@@ -1,16 +1,7 @@
 import React, { useContext } from 'react';
 import '../assets/css/portfoliodetail.css';
-import { LuChevronLeft } from "react-icons/lu";
-import pd_content_img from "../assets/images/portfolio-page-img/portfolio-detail-contentimg.png";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import {
-    Pagination,
-    A11y,
-    Autoplay,
-} from "swiper/modules";
-import pd_slider_oneimg from '../assets/images/portfolio-page-img/portfolio-detiail-slider-1.png';
-import pd_slider_twoimg from '../assets/images/portfolio-page-img/portfolio-detail-slider-2.png';
-import pd_slider_threeimg from '../assets/images/portfolio-page-img/portfolio-detail-slider-3.png';
+import {Autoplay,} from "swiper/modules";
 import 'swiper/css';
 import { useParams } from 'react-router-dom';
 import { ApiContext } from '../context/ApiContext';
@@ -26,7 +17,7 @@ const PortfolioDetail = () => {
             <section className='fm-detail-hero mb-5 py-5'>
                 <div className='container py-5'>
                     <div className='fm-portfolio-detail-nav d-flex align-items-center pb-5 gap-2'>
-                         <a href="/portfolio">Portfoliomuz</a> / <p className='mb-0'>{portfolioDetails?.project_title}</p>
+                         <a href="/layihelerimiz">Portfoliomuz</a> / <p className='mb-0'>{portfolioDetails?.project_title}</p>
                     </div>
                 </div>
             </section>

@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { LuChevronLeft } from "react-icons/lu";
 import '../assets/css/blogdetail.css';
 import { NavLink, useParams } from 'react-router-dom';
 import { ApiContext } from '../context/ApiContext';
+import { Helmet } from 'react-helmet-async';
 
 const BlogDetail = () => {
     const { blog } = useContext(ApiContext);
@@ -10,15 +10,18 @@ const BlogDetail = () => {
     const blogId = Number(id);
     const blogDetails = blog.find(p => p.id === blogId);
 
-    
+
     const latestBlogs = blog.slice(-5).reverse();
 
     return (
         <div className='fm-blog-detail'>
+            <Helmet>
+                <title>Fortuna media - bloq_detail</title>
+            </Helmet>
             <section className='fm-bd-hero mb-5 py-5'>
                 <div className='container py-5'>
                     <div className='fm-bd-nav d-flex align-items-center pb-5 gap-3'>
-                        <a href="/blog">Bloq</a> / <p className='mb-0'>{blogDetails?.title} </p>
+                        <a href="/bloq">Bloq</a> / <p className='mb-0'>{blogDetails?.title} </p>
                     </div>
                 </div>
             </section>
@@ -32,7 +35,7 @@ const BlogDetail = () => {
                                 <div className="py-3">
                                     <span>{blogDetails?.show_date}</span>
                                     <h2 className="pt-4">{blogDetails?.title}</h2>
-                                    <p dangerouslySetInnerHTML={{ __html: blogDetails?.content}}></p>
+                                    <p dangerouslySetInnerHTML={{ __html: blogDetails?.content }}></p>
                                 </div>
                             </article>
                         </div>

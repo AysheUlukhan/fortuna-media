@@ -8,6 +8,7 @@ import PortfolioCard from '../components/PortfolioCard';
 import TeamCard from '../components/TeamCard';
 import { ApiContext } from '../context/ApiContext';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const About = () => {
   const { statistic, projects, team } = useContext(ApiContext);
@@ -24,6 +25,9 @@ const About = () => {
 
   return (
     <div className='about'>
+      <Helmet>
+        <title>Fortuna media - haqqımızda</title>
+      </Helmet>
       <section className='about-page mb-5'>
         <div className='container py-5'>
           <div className='about-hero-content col-lg-6'>
@@ -32,7 +36,7 @@ const About = () => {
             <p>Biz işinizin tələblərinə cavab vermək üçün dizayn və brendinq həlləri ilə başlayaraq təsirli rəqəmsal marketinq, PR&media, TV&Radio xidmətləri təklif edən dinamik  bir şirkətik.</p>
           </div>
           <div className='text-center'>
-          <Link to='/contact'>Müraciət et</Link>
+          <Link to='/əlaqə'>Müraciət et</Link>
           </div>
         </div>
       </section>
@@ -117,7 +121,7 @@ const About = () => {
 
             
             <div className='text-center py-5'>
-              <Link to={'/portfolio'} className='fm-portfolio-link'>Daha çox</Link>
+              <Link to={'/layihelerimiz'} className='fm-portfolio-link'>Daha çox</Link>
             </div>
         
            
@@ -131,7 +135,7 @@ const About = () => {
             <div className="col-lg-6 col-md-6 col-sm-12 col-12 fm-project-contact-content">
               <div className='pt-5'>
                 <h5 className='pb-5'>Layihən var?</h5>
-                <Link to='/Contact' className='fm-contact-link'>Müraciət et</Link>
+                <Link to='/əlaqə' className='fm-contact-link'>Müraciət et</Link>
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">

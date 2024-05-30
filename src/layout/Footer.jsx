@@ -11,6 +11,8 @@ const Footer = () => {
   const location = useLocation();
   const  {contact_info } = useContext(ApiContext);
 
+  const date = new Date();
+
   if (location.pathname !== "/404") {
     
     return (
@@ -30,7 +32,7 @@ const Footer = () => {
               </div>
             </div>
             <div className='d-flex justify-content-end'>
-              <p><span>Fortuna Media</span> © 2024. All rights reserved.</p>
+              <p><span>Fortuna Media</span> © {date.getFullYear()}. All rights reserved.</p>
             </div>
           </div>
   

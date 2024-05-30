@@ -26,22 +26,22 @@ const Header = () => {
                         <div className='d-none d-lg-block d-xl-block d-xxl-block pt-2'>
                             <ul className='d-flex xl_menu'>
                                 <li>
-                                    <NavLink to="/About" className='nav-link'>Haqqımızda</NavLink>
+                                    <NavLink to="/haqqımızda" className='nav-link'>Haqqımızda</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/Services" className='nav-link'>Xidmətlərimiz</NavLink>
+                                    <NavLink to="/xidmetlerimiz" className='nav-link'>Xidmətlərimiz</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/Portfolio" className='nav-link'>Portfelimiz</NavLink>
+                                    <NavLink to="/layihelerimiz" className='nav-link'>Layihələrimiz</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/Blog" className='nav-link'>Bloq</NavLink>
+                                    <NavLink to="/bloq" className='nav-link'>Bloq</NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="https://www.youtube.com/@FortunaMediaOfficial" className='nav-link' target='_blank'>Fortuna TV</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/Contact" className='nav-link'>Əlaqə</NavLink>
+                                    <NavLink to="/əlaqə" className='nav-link'>Əlaqə</NavLink>
                                 </li>
                             </ul>
                         </div>
@@ -56,22 +56,22 @@ const Header = () => {
                                 <div className="offcanvas-body">
                                     <ul>
                                         <li>
-                                            <NavLink to="/About" className='nav-link' onClick={handleCloseOffcanvas}>Haqqımızda</NavLink>
+                                            <NavLink to="/haqqımızda" className='nav-link' onClick={handleCloseOffcanvas}>Haqqımızda</NavLink>
                                         </li>
                                         <li>
-                                            <NavLink to="/Services" className='nav-link' onClick={handleCloseOffcanvas}>Xidmətlərimiz</NavLink>
+                                            <NavLink to="/xidmetlerimiz" className='nav-link' onClick={handleCloseOffcanvas}>Xidmətlərimiz</NavLink>
                                         </li>
                                         <li>
-                                            <NavLink to="/Portfolio" className='nav-link' onClick={handleCloseOffcanvas}>Portfelimiz</NavLink>
+                                            <NavLink to="/layihelerimiz" className='nav-link' onClick={handleCloseOffcanvas}>Layihələrimiz</NavLink>
                                         </li>
                                         <li>
-                                            <NavLink to="/Blog" className='nav-link' onClick={handleCloseOffcanvas}>Bloq</NavLink>
+                                            <NavLink to="/bloq" className='nav-link' onClick={handleCloseOffcanvas}>Bloq</NavLink>
                                         </li>
                                         <li>
                                             <NavLink to="https://www.youtube.com/@FortunaMediaOfficial" className='nav-link' target='_blank' onClick={handleCloseOffcanvas}>Fortuna TV</NavLink>
                                         </li>
                                         <li>
-                                            <NavLink to="/Contact" className='nav-link' onClick={handleCloseOffcanvas}>Əlaqə</NavLink>
+                                            <NavLink to="/əlaqə" className='nav-link' onClick={handleCloseOffcanvas}>Əlaqə</NavLink>
                                         </li>
                                     </ul>
                                 </div>

@@ -34,12 +34,12 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/haqqımızda" element={<About />} />
+        <Route path="/xidmetlerimiz" element={<Services />} />
+        <Route path="/layihelerimiz" element={<Portfolio />} />
+        <Route path="/bloq" element={<Blog />} />
         <Route path="/blogDetail/:id" element={<BlogDetail/>}/>
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/əlaqə" element={<Contact />} />
         <Route path="/servicesDetail/:id" element={<ServicesDetail />} />
         <Route path="/portfolioDetail/:id" element={<PortfolioDetail/>}/>
         <Route path="*" element={<Navigate replace to="/404" />}/>

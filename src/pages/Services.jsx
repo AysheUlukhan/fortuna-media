@@ -2,12 +2,16 @@ import React, { useContext } from 'react';
 import '../assets/css/services.css';
 import { ApiContext } from '../context/ApiContext';
 import { Link, NavLink } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const Services = () => {
   const { services } = useContext(ApiContext); 
 
   return (
     <div className='fm-service'>
+      <Helmet>
+        <title>Fortuna media - xidmətlərimiz</title>
+      </Helmet>
       <section className='fm-service-page mb-5 py-5'>
         <div className='container py-5'>
           <div className='fm-service-hero-content col-lg-6 mb-4 mb-lg-0'>
@@ -15,7 +19,7 @@ const Services = () => {
             <p>Biz işinizin tələblərinə cavab vermək üçün dizayn və brendinq həlləri ilə başlayaraq təsirli rəqəmsal marketinq, PR&media, TV&Radio xidmətləri təklif edən dinamik bir şirkətik.</p>
           </div>
           <div className='text-center'>
-            <Link to='/contact'>Müraciət et</Link>
+            <Link to='/əlaqə'>Müraciət et</Link>
           </div>
         </div>
       </section>

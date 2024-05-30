@@ -3,6 +3,7 @@ import '../assets/css/portfolio.css';
 import { ApiContext } from '../context/ApiContext';
 import { Link } from 'react-router-dom';
 import PortfolioCard from '../components/PortfolioCard';
+import { Helmet } from 'react-helmet-async';
 
 const Portfolio = () => {
   const { projects, services } = useContext(ApiContext);
@@ -28,6 +29,9 @@ const Portfolio = () => {
 
   return (
     <div className='fm-portfolio'>
+      <Helmet>
+        <title>Fortuna media - layihələrimiz</title>
+      </Helmet>
       <section className='fm-hero mb-5 py-5'>
         <div className='container py-5'>
           <div className='fm-hero-content col-lg-6'>
@@ -36,7 +40,7 @@ const Portfolio = () => {
             <p>Məqsədi təyin etmək, hədəf auditoriyasını başa düşmək, birləşmiş identitet və mesaj yaratmaq, müvafiqliyi təmin etmək bu strateyaya daxil olan əsas mərhələlərdir. </p>
           </div>
           <div className='text-center'>
-            <Link to='/contact'>Müraciət et</Link>
+            <Link to='/əlaqə'>Müraciət et</Link>
           </div>
         </div>
       </section>
@@ -63,7 +67,7 @@ const Portfolio = () => {
                 </div>
                 <div className="row g-4">
                   {shownData.map((item) => (
-                    <PortfolioCard alldata={item} key={item.id}/>
+                    <PortfolioCard alldata={item} key={item.id} />
                   ))}
                 </div>
                 {shownData.length < projects.length && (

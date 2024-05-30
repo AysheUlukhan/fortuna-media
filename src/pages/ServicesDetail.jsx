@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import '../assets/css/servicedetail.css';
-import { LuChevronLeft } from "react-icons/lu";
 import services_work from '../assets/images/service-page-img/services-work-list.png'
 import PortfolioCard from '../components/PortfolioCard';
 import { ApiContext } from '../context/ApiContext';
@@ -22,7 +21,6 @@ const ServicesDetail = () => {
             try {
                 const res = await axios.get(`${BASE_URL}/service_cards/`);
                 setCardDetail(res.data);
-                console.log(res.data);
             } catch (err) {
                 console.log(err);
             }
@@ -48,14 +46,14 @@ const ServicesDetail = () => {
             <section className='fm-service-detail-hero mb-5 py-5'>
                 <div className='container py-5'>
                     <div className='fm-service-detail-nav d-flex align-items-center pb-5 gap-3'>
-                        <Link to="/services">Xidmətlərimiz</Link>/<p className='mb-0'>{serviceDetails?.service_title}</p>
+                        <Link to="/xidmetlerimiz">Xidmətlərimiz</Link>/<p className='mb-0'>{serviceDetails?.service_title}</p>
                     </div>
                     <div className='fm-service-detail-hero-content col-lg-6'>
                         <h2>{serviceDetails?.service_title}</h2>
                         <p>Biz işinizin tələblərinə cavab vermək üçün dizayn və brendinq həlləri ilə başlayaraq təsirli rəqəmsal marketinq, PR&media, TV&Radio xidmətləri təklif edən dinamik bir şirkətik.</p>
                     </div>
                     <div className='text-center'>
-                        <Link to='/Contact' className='fm-service-detail-contactlink' href='#'>Müraciət et</Link>
+                        <Link to='/əlaqə' className='fm-service-detail-contactlink' href='#'>Müraciət et</Link>
                     </div>
                 </div>
             </section>
@@ -120,7 +118,7 @@ const ServicesDetail = () => {
                             ))}
                         </div>
                         <div className='text-center py-5'>
-                            <Link to='/Portfolio' className='fm-portfolio-link'>Daha çox</Link>
+                            <Link to='/layihelerimiz' className='fm-portfolio-link'>Daha çox</Link>
                         </div>
                     </div>
                 </div>
