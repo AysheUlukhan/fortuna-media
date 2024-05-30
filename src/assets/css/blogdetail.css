@@ -37,22 +37,6 @@
     line-height: 20px;
 }
 
-
-
-
-
-
-
-
-
-/* .fm-blog-detail .left-related-posts h6{
-    transition: all .5s;
-}
-
-.blogDetail .left-related-posts h6:hover{
-    color: var(--medium-blue);
-} */
-
 .fm-blog-detail .fm-blog-post .dblog-img{
     height: 450px !important;
     border-radius: 8px;

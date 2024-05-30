@@ -31,41 +31,6 @@
     border-radius: 4px;
 }
 
-/* 
-.fm-blog .fm-blog-card .card {
-    position: relative;
-    overflow: hidden;
-    border: none;
-}
-
-.fm-blog .fm-blog-card .card img{
-    width: 415;
-    height: 376px;
-}
-
-
-
-.fm-blog .fm-blog-card .card .text {
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: .5s;
-    pointer-events: none;
-    width: 100%;
-}
-
-.fm-blog .fm-blog-card .card:hover .text {
-    bottom: -5px;
-}
-
-.fm-blog .fm-blog-card .card .text h5 {
-    color: white;
-    font-size: 24px;
-} */
-
 
 .fm-blog .card {
     cursor: pointer;

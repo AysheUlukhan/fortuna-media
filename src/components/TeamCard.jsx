@@ -12,9 +12,6 @@ const TeamCard = ({ alldata }) => {
                 </div>
             </div>
         </div>
-
-
-
     )
 }
 

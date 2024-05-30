@@ -3,22 +3,32 @@ import '../assets/css/home.css';
 import HomeServicesCard from '../components/HomeServicesCard';
 import { ApiContext } from '../context/ApiContext';
 import { Link } from 'react-router-dom';
+import { TypeAnimation } from 'react-type-animation';
 
 const Home = () => {
-  const { whyus, services } = useContext(ApiContext); // Bir yerdə istifadə edirik
-  
-  console.log(services);
+  const { services } = useContext(ApiContext);
+
+  console.log("Services:", services);
+
+  const serviceTitles = services?.map(service => service.service_title) || [];
+  const typeAnimationSequence = serviceTitles.flatMap(title => [title, 2000]);
+
+  console.log("Type Animation Sequence:", typeAnimationSequence);
 
   return (
     <div className='home'>
       <section className="mb-5 hero-page">
         <div className='container py-5'>
           <div className='home-hero-content col-lg-6'>
-            <div className='animated-text'>
-              {services?.map((item) => (
-                <h2 className='line' key={item.id}>{item.service_title}</h2> // return ifadəsi və key əlavə edildi
-              ))}
-            </div>
+            <h2>
+              {typeAnimationSequence.length > 0 && (
+                <TypeAnimation
+                  sequence={typeAnimationSequence}
+                  speed={50}
+                  repeat={Infinity}
+                />
+              )}
+            </h2>
             <h3>istə, biz edək</h3>
             <p>Biz işinizin tələblərinə cavab vermək üçün dizayn və brendinq həlləri ilə başlayaraq təsirli rəqəmsal marketinq, PR&media, TV&Radio xidmətləri təklif edən dinamik bir şirkətik.</p>
           </div>
@@ -50,11 +60,11 @@ const Home = () => {
             <h5>Niyə biz?</h5>
           </div>
           <div className="row pt-4 row-gap-4">
-            {whyus?.map((item) => (
+            {services?.map((item) => (
               <div className='col-lg-3 col-xl-3 col-md-6 col-sm-6 col-12' key={item.id}>
                 <div className='cards'>
-                  <h6 className='card-header'>{item.title}</h6>
-                  <p className='card-text'>{item.content}</p>
+                  <h6 className='card-header'>{item.service_title}</h6>
+                  <p className='card-text'>{item.description}</p>
                 </div>
               </div>
             ))}

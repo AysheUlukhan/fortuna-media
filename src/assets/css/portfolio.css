@@ -95,8 +95,8 @@
 }
 
 .scrollable-list {
-  overflow-x: auto; /* Yatayda kaydırma çubuğu eklemek */
-  white-space: nowrap; /* Öğeleri yan yana tutmak için */
+  overflow-x: auto; 
+  white-space: nowrap; 
   
 }
 

@@ -9,7 +9,6 @@ nav ul {
 
 nav .xl_menu li a:hover {
     color: #ED7F1E !important;
-    border-bottom: 1px solid #ED7F1E;
 }
 
 nav .xl_menu .active {

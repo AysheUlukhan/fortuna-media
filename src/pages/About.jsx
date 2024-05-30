@@ -22,16 +22,6 @@ const About = () => {
     setVisibleTeamCount(team.length);
   };
 
-  // const [shownProjectData, setShownProjectData] = useState([]);
-  // const [visibleProjectCount, setVisibleProjectCount] = useState(2);
-
-  // useEffect(() => {
-  //   setShownProjectData(projects.slice(0, visibleProjectCount));
-  // }, [projects, visibleProjectCount]);
-
-  // const handleLoadMoreProject = () => {
-  //   setVisibleProjectCount(projects.length);
-  // };
   return (
     <div className='about'>
       <section className='about-page mb-5'>

@@ -1,12 +1,10 @@
 import React, { useContext, useState } from 'react';
 import '../assets/css/contact.css';
 import location from '../assets/images/contact-page-img/location_..png';
-import contact_hero from '../assets/images/contact-page-img/contact-content.png';
 import axios from 'axios';
 import { BASE_URL } from '../api/Api';
 import { ApiContext } from '../context/ApiContext';
 import { Select } from 'antd';
-import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const { Option } = Select;
@@ -115,7 +113,7 @@ const Contact = () => {
       <section className='fm-contact-form'>
         <div className="container">
 
-          <div className="row align-items-center g-5 mt-4">
+          <div className="row align-items-center  mt-4">
             <div className="col-lg-6 col-md-6 col-sm-12 col-12 contact_info_img">
               <div>
                 <img src={contact_info[0]?.image} className="d-block mx-lg-auto img-fluid w-100" alt="" />

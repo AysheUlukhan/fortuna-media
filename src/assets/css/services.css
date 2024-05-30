@@ -7,11 +7,10 @@
 
 
 
-/* Tablet cihazlar üçün media queries */
 @media (min-width: 768px) {
   .section {
-    flex-direction: row; /* Tablet və daha böyük cihazlar üçün sıra yönü */
-    align-items: center; /* Mərkəzi düzləşdirmə */
+    flex-direction: row; 
+    align-items: center; 
   }
 
   .left, .right {
@@ -19,7 +18,7 @@
   }
 
   .left img, .right img {
-    width: 50%; /* Tablet cihazlar üçün şəkil ölçüsü */
+    width: 50%; 
   }
 
   .right {
@@ -32,10 +31,9 @@
   }
 }
 
-/* Desktop cihazlar üçün media queries */
 @media (min-width: 992px) {
   .section img {
-    width: 40%; /* Desktop cihazlar üçün şəkil ölçüsü */
+    width: 40%; 
   }
 }
 

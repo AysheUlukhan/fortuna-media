@@ -1,12 +1,9 @@
 * {
   list-style: none;
   text-decoration: none !important;
-  /* font-family: "Montserrat", sans-serif; */
   font-family: "Poppins", sans-serif;
 
 }
-
-
 
 ::-webkit-scrollbar {
   width: 10px;

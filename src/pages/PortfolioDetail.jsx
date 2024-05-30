@@ -33,15 +33,6 @@ const PortfolioDetail = () => {
 
             <section className='fm-pd-category'>
                 <div className="container">
-                    {/* <div className='fm-pd-category-head scrollable-list'>
-                        <ul className='d-flex justify-content-between gap-3'>
-                            {services.length > 0 && services.map((item) => (
-                                <li key={item.id}>
-                                    <span onClick={() => handleFilter(item.service_title)}>{item.service_title}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </div> */}
 
                     <div className="row flex-row-reverse pt-5 fm-pd-content">
                         <div className="col-lg-6">
